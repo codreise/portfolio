@@ -7,8 +7,8 @@ app.innerHTML = `
     <nav>
       <a href="#about">Про мене</a>
       <a href="#skills">Навички</a>
-      <a href="#projects">Проєкти</a>
-      <a href="#resume">Резюме</a>
+      <a href="#projects">Проекти</a>
+      <a href="#resume" class="resume-btn">Резюме</a>
       <a href="#contact">Контакти</a>
     </nav>
   </header>
@@ -35,8 +35,41 @@ app.innerHTML = `
     </ul>
   </section>
 
+  <section id="projects">
+    <h2>Проекти</h2>
+    <div class="project">
+      <h3>ToDo App</h3>
+      <p>Простий список справ з використанням JavaScript і localStorage.</p>
+      <a href="https://твій-проект.com" target="_blank">Переглянути</a>
+      <a href="https://github.com/твій-профіль/todo-app" target="_blank">GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Weather Dashboard</h3>
+      <p>Додаток для перегляду погоди у містах з використанням API OpenWeatherMap.</p>
+      <a href="https://твій-проект.com/weather" target="_blank">Переглянути</a>
+      <a href="https://github.com/твій-профіль/weather-dashboard" target="_blank">GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Landing Page</h3>
+      <p>Адаптивна лендинг-сторінка для малого бізнесу з сучасним дизайном.</p>
+      <a href="https://твій-проект.com/landing" target="_blank">Переглянути</a>
+      <a href="https://github.com/твій-профіль/landing-page" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Резюме</h2>
+    <a href="assets/resume.pdf" download class="download-resume-btn">📄 Завантажити резюме</a>
+  </section>
+
+  <section id="contact">
+  <h2>Контакти</h2>
+  <p>Email: <a href="https://mail.google.com/mail/u/0/#inbox">kirichenkod092@gmail.com</a></p>
+  <p>Telegram: <a href="https://t.me/kirichenko_d" target="_blank">@kirichenko_d</a></p>
+  <p>GitHub: <a href="https://github.com/codreise" target="_blank">github.com/codreise</a></p>
+</section>
+
   <footer>
     <p>© 2025 Дмитро Кіріченко</p>
-    <a href="assets/resume.pdf" download>📄 Завантажити резюме</a>
   </footer>
 `;

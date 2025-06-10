@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 120px;
+  scroll-padding-top: 120px; /* Відступ для фіксованого хедера */
   scroll-behavior: smooth;
 }
 
@@ -57,6 +57,7 @@ section, .about-section {
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  scroll-margin-top: 120px; /* Додаємо відступ для плавного скролу */
 }
 
 section h2 {
@@ -82,15 +83,39 @@ section h2 {
 
 .profile-photo {
   display: block;
-  width: 280px;
-  height: 280px;
-  border-radius: 18px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  margin: 32px auto 32px auto; /* Додаємо верхній відступ */
+  margin: 48px auto 32px auto; /* Більший верхній відступ, фото нижче */
   box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
   border: 8px solid #fff;
   background: #eaeaea;
+}
+
+#about h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.about-text {
+  background: #fdfdfd;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 /* Футер */
@@ -142,4 +167,4 @@ footer a:hover {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
