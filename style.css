@@ -138,6 +138,56 @@ footer a:hover {
   color: #16a085;
 }
 
+/* Навички */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  background-color: #1abc9c;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #16a085;
+  cursor: default;
+}
+
+/* Темна тема */
+body.dark-theme {
+  background: #181c23;
+  color: #eaeaea;
+}
+body.dark-theme header,
+body.dark-theme section,
+body.dark-theme .about-section,
+body.dark-theme footer {
+  background: #232a34;
+  color: #eaeaea;
+}
+body.dark-theme .about-text {
+  background: #22272e;
+  color: #eaeaea;
+}
+body.dark-theme .tag {
+  background-color: #1abc9c;
+  color: #fff;
+}
+body.dark-theme a {
+  color: #1abc9c;
+}
+body.dark-theme a:hover {
+  color: #16a085;
+}
+
 /* Адаптивність для мобільних пристроїв */
 @media (max-width: 600px) {
   section, .about-section {

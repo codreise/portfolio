@@ -10,6 +10,7 @@ app.innerHTML = `
       <a href="#projects">Проекти</a>
       <a href="#resume" class="resume-btn">Резюме</a>
       <a href="#contact">Контакти</a>
+      <button id="theme-toggle" title="Змінити тему">🌙</button>
     </nav>
   </header>
 
@@ -23,16 +24,17 @@ app.innerHTML = `
 
   <section id="skills">
     <h2>Навички</h2>
-    <ul>
-      <li>HTML5, CSS3</li>
-      <li>JavaScript (ES6+)</li>
-      <li>React (базово)</li>
-      <li>Node.js (базово)</li>
-      <li>PostgreSQL, MongoDB</li>
-      <li>Git, GitHub</li>
-      <li>Адаптивна верстка</li>
-      <li>Базові знання англійської</li>
-    </ul>
+    <div class="skills-tags">
+      <span class="tag">HTML5</span>
+      <span class="tag">CSS3</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Git</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">Адаптивна верстка</span>
+      <span class="tag">Базова англійська</span>
+    </div>
   </section>
 
   <section id="projects">
@@ -40,8 +42,8 @@ app.innerHTML = `
     <div class="project">
       <h3>ToDo App</h3>
       <p>Простий список справ з використанням JavaScript і localStorage.</p>
-      <a href="https://твій-проект.com" target="_blank">Переглянути</a>
-      <a href="https://github.com/твій-профіль/todo-app" target="_blank">GitHub</a>
+      <a href="ToDo App/todo.html" target="_blank">Відкрити ToDo App</a>
+      <a href="https://github.com/codreise?tab=repositories" target="_blank">GitHub</a>
     </div>
     <div class="project">
       <h3>Weather Dashboard</h3>
@@ -73,3 +75,13 @@ app.innerHTML = `
     <p>© 2025 Дмитро Кіріченко</p>
   </footer>
 `;
+
+// Додаємо перемикач теми
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    btn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+  });
+});

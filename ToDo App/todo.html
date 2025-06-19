@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-app">
+    <h1>ToDo Список</h1>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Нова задача..." />
+      <button id="addBtn">Додати</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="active">Усі</button>
+      <button data-filter="active">Активні</button>
+      <button data-filter="done">Виконані</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
