@@ -5,11 +5,16 @@ app.innerHTML = `
     <h1>Дмитро Кіріченко</h1>
     <p>Full-Stack Developer</p>
     <nav>
-      <a href="#about">Про мене</a>
-      <a href="#skills">Навички</a>
-      <a href="#projects">Проекти</a>
-      <a href="#resume" class="resume-btn">Резюме</a>
-      <a href="#contact">Контакти</a>
+      ${['about', 'skills', 'projects', 'resume', 'contact'].map(id =>
+        id === 'resume'
+          ? `<a href="#${id}" class="resume-btn">Резюме</a>`
+          : `<a href="#${id}">${{
+              about: 'Про мене',
+              skills: 'Навички',
+              projects: 'Проекти',
+              contact: 'Контакти'
+            }[id] || id}</a>`
+      ).join('')}
       <button id="theme-toggle" title="Змінити тему">🌙</button>
     </nav>
   </header>
@@ -25,15 +30,8 @@ app.innerHTML = `
   <section id="skills">
     <h2>Навички</h2>
     <div class="skills-tags">
-      <span class="tag">HTML5</span>
-      <span class="tag">CSS3</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">React</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Git</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">Адаптивна верстка</span>
-      <span class="tag">Базова англійська</span>
+      ${['HTML5','CSS3','JavaScript','React','Node.js','Git','GitHub','Адаптивна верстка','Базова англійська']
+        .map(skill => `<span class="tag">${skill}</span>`).join('')}
     </div>
   </section>
 
@@ -42,20 +40,17 @@ app.innerHTML = `
     <div class="project">
       <h3>ToDo App</h3>
       <p>Простий список справ з використанням JavaScript і localStorage.</p>
-      <a href="ToDo App/todo.html" target="_blank">Відкрити ToDo App</a>
-      <a href="https://github.com/codreise?tab=repositories" target="_blank">GitHub</a>
+      <a href="ToDo App/index.html" target="_blank">Відкрити ToDo App</a>
     </div>
     <div class="project">
       <h3>Weather Dashboard</h3>
-      <p>Додаток для перегляду погоди у містах з використанням API OpenWeatherMap.</p>
-      <a href="https://твій-проект.com/weather" target="_blank">Переглянути</a>
-      <a href="https://github.com/твій-профіль/weather-dashboard" target="_blank">GitHub</a>
+      <p>Додаток для перегляду погоди у містах.</p>
+      <a href="weather/index.html" target="_blank">Переглянути</a>
     </div>
     <div class="project">
       <h3>Landing Page</h3>
       <p>Адаптивна лендинг-сторінка для малого бізнесу з сучасним дизайном.</p>
       <a href="https://твій-проект.com/landing" target="_blank">Переглянути</a>
-      <a href="https://github.com/твій-профіль/landing-page" target="_blank">GitHub</a>
     </div>
   </section>
 
@@ -65,11 +60,11 @@ app.innerHTML = `
   </section>
 
   <section id="contact">
-  <h2>Контакти</h2>
-  <p>Email: <a href="https://mail.google.com/mail/u/0/#inbox">kirichenkod092@gmail.com</a></p>
-  <p>Telegram: <a href="https://t.me/kirichenko_d" target="_blank">@kirichenko_d</a></p>
-  <p>GitHub: <a href="https://github.com/codreise" target="_blank">github.com/codreise</a></p>
-</section>
+    <h2>Контакти</h2>
+    <p>Email: <a href="https://mail.google.com/mail/u/0/#inbox">kirichenkod092@gmail.com</a></p>
+    <p>Telegram: <a href="https://t.me/kirichenko_d" target="_blank">@kirichenko_d</a></p>
+    <p>GitHub: <a href="https://github.com/codreise" target="_blank">github.com/codreise</a></p>
+  </section>
 
   <footer>
     <p>© 2025 Дмитро Кіріченко</p>

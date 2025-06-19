@@ -1,3 +1,19 @@
+document.body.innerHTML = `
+  <div class="todo-app">
+    <h1>ToDo Список</h1>
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Нова задача..." />
+      <button id="addBtn">Додати</button>
+    </div>
+    <div class="filters">
+      <button data-filter="all" class="active">Усі</button>
+      <button data-filter="active">Активні</button>
+      <button data-filter="done">Виконані</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+`;
+
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");

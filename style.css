@@ -1,5 +1,5 @@
 html {
-  scroll-padding-top: 120px; /* Відступ для фіксованого хедера */
+  scroll-padding-top: 120px;
   scroll-behavior: smooth;
 }
 
@@ -43,7 +43,7 @@ nav a {
   margin: 0 12px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 nav a:hover {
   color: #1abc9c;
@@ -57,7 +57,7 @@ section, .about-section {
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  scroll-margin-top: 120px; /* Додаємо відступ для плавного скролу */
+  scroll-margin-top: 120px;
 }
 
 section h2 {
@@ -82,13 +82,11 @@ section h2 {
 }
 
 .profile-photo {
-  display: block;
-  width: 340px;
-  height: 340px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top center;
-  margin: 48px auto 32px auto; /* Більший верхній відступ, фото нижче */
+  margin: 32px auto;
   box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
   border: 8px solid #fff;
   background: #eaeaea;
@@ -111,7 +109,6 @@ section h2 {
 }
 
 .about-text p {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   color: #444;
   line-height: 1.8;
@@ -132,7 +129,7 @@ footer a {
   color: #1abc9c;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 footer a:hover {
   color: #16a085;
@@ -153,12 +150,35 @@ footer a:hover {
   border-radius: 20px;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .tag:hover {
   background-color: #16a085;
   cursor: default;
+}
+
+/* Проекти */
+.project a {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 8px 18px;
+  border-radius: 22px;
+  background: #1abc9c;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  outline: none;
+}
+
+.project a:hover, .project a:focus {
+  background: #16a085;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* Темна тема */
@@ -188,31 +208,27 @@ body.dark-theme a:hover {
   color: #16a085;
 }
 
-/* Адаптивність для мобільних пристроїв */
+/* Адаптивність */
 @media (max-width: 600px) {
   section, .about-section {
-    padding: 20px 15px;
-    margin: 20px 10px;
+    padding: 20px 10px;
+    margin: 20px 5px;
   }
-
   .profile-photo {
     width: 100%;
-    max-width: 220px;
+    max-width: 140px;
     height: auto;
     border-radius: 12px;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
   }
-
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
-
   header p {
     font-size: 1rem;
   }
-
   nav a {
-    margin: 0 8px;
+    margin: 0 6px;
     font-size: 0.9rem;
   }
 }
