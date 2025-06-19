@@ -49,18 +49,19 @@ nav a:hover {
   color: #1abc9c;
 }
 
-/* Секції */
+/* Загальні стилі для секцій */
 section, .about-section {
   max-width: 900px;
   margin: 40px auto;
-  background: white;
+  background: #fff;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   scroll-margin-top: 120px;
 }
 
-section h2 {
+/* Заголовки секцій */
+section h2, .about-section h2 {
   margin-top: 0;
   border-bottom: 2px solid #1abc9c;
   padding-bottom: 8px;
@@ -81,85 +82,18 @@ section h2 {
   text-align: center;
 }
 
-.profile-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 32px auto;
-  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
-  border: 8px solid #fff;
-  background: #eaeaea;
-}
-
-#about h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.about-text {
-  background: #fdfdfd;
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.8;
-  text-align: justify;
-}
-
-/* Футер */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  color: #777;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
-  margin-top: 60px;
-}
-
-footer a {
+/* Посилання у header, footer та темній темі */
+header a, footer a, body.dark-theme a {
   color: #1abc9c;
   text-decoration: none;
-  font-weight: 600;
   transition: color 0.3s;
 }
-footer a:hover {
+header a:hover, footer a:hover, body.dark-theme a:hover {
   color: #16a085;
 }
 
-/* Навички */
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.tag {
-  background-color: #1abc9c;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.tag:hover {
-  background-color: #16a085;
-  cursor: default;
-}
-
-/* Проекти */
-.project a {
+/* Кнопки та посилання-кнопки */
+.project a, #cityForm button {
   display: inline-block;
   margin: 8px 8px 0 0;
   padding: 8px 18px;
@@ -173,9 +107,10 @@ footer a:hover {
   transition: background 0.2s, transform 0.15s;
   border: none;
   outline: none;
+  cursor: pointer;
 }
-
-.project a:hover, .project a:focus {
+.project a:hover, #cityForm button:hover,
+.project a:focus, #cityForm button:focus {
   background: #16a085;
   color: #fff;
   transform: translateY(-2px) scale(1.04);
@@ -207,20 +142,59 @@ body.dark-theme a {
 body.dark-theme a:hover {
   color: #16a085;
 }
+body.dark-theme .project a,
+body.dark-theme #cityForm button {
+  background: #1abc9c;
+  color: #fff;
+}
 
-/* Адаптивність */
+body.dark-theme .project a:hover,
+body.dark-theme #cityForm button:hover {
+  background: #16a085;
+  color: #fff;
+}
+
+/* Навички */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tag {
+  background-color: #1abc9c;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.tag:hover {
+  background-color: #16a085;
+  cursor: default;
+}
+
+.profile-photo {
+  display: block;
+  margin: 20px auto;
+  width: 250px;
+  height: auto;
+  max-width: 90%;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
+  border: 6px solid #fff;
+  background: #eaeaea;
+}
+
 @media (max-width: 600px) {
-  section, .about-section {
-    padding: 20px 10px;
-    margin: 20px 5px;
-  }
   .profile-photo {
-    width: 100%;
-    max-width: 140px;
-    height: auto;
-    border-radius: 12px;
-    margin: 20px auto;
+    width: 140px;
+    border-radius: 18px;
   }
+}
   header h1 {
     font-size: 1.4rem;
   }
@@ -231,6 +205,5 @@ body.dark-theme a:hover {
     margin: 0 6px;
     font-size: 0.9rem;
   }
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
