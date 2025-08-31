@@ -36,23 +36,38 @@ app.innerHTML = `
   </section>
 
   <section id="projects">
-    <h2>Проекти</h2>
-    <div class="project">
-      <h3>ToDo App</h3>
-      <p>Простий список справ з використанням JavaScript і localStorage.</p>
-      <a href="ToDo App/index.html" target="_blank">Відкрити ToDo App</a>
+  <h2>Проекти</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <iframe src="ToDo App/index.html" title="ToDo App Preview"></iframe>
+      <div class="project-info">
+        <h3>ToDo App</h3>
+        <p>Простий список справ з використанням JavaScript і localStorage.</p>
+        <a href="ToDo App/index.html" target="_blank" class="btn">Відкрити</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Weather Dashboard</h3>
-      <p>Додаток для перегляду погоди у містах.</p>
-      <a href="weather/index.html" target="_blank">Переглянути</a>
+
+    <div class="project-card">
+      <iframe src="weather/index.html" title="Weather Dashboard Preview"></iframe>
+      <div class="project-info">
+        <h3>Weather Dashboard</h3>
+        <p>Додаток для перегляду погоди у містах.</p>
+        <a href="weather/index.html" target="_blank" class="btn">Переглянути</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Landing Page</h3>
-      <p>Адаптивна лендинг-сторінка для малого бізнесу з сучасним дизайном.</p>
-      <a href="https://твій-проект.com/landing" target="_blank">Переглянути</a>
+
+    <div class="project-card">
+      <iframe src="https://твій-проект.com/landing" title="Landing Page Preview"></iframe>
+      <div class="project-info">
+        <h3>Landing Page</h3>
+        <p>Адаптивна лендинг-сторінка для малого бізнесу з сучасним дизайном.</p>
+        <a href="https://твій-проект.com/landing" target="_blank" class="btn">Переглянути</a>
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <section id="resume">
     <h2>Резюме</h2>
@@ -71,12 +86,21 @@ app.innerHTML = `
   </footer>
 `;
 
-// Додаємо перемикач теми
+// Перемикач теми із збереженням у localStorage
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
+
+  // Відновлюємо тему
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    btn.textContent = '☀️';
+  }
+
   btn.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
-    btn.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+    const isDark = document.body.classList.contains('dark-theme');
+    btn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 });
