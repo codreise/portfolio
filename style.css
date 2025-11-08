@@ -12,7 +12,7 @@ body {
   padding: 120px 20px 0;
 }
 
-/* Фіксований хедер */
+/* ---------------- HEADER ---------------- */
 header {
   position: fixed;
   top: 0;
@@ -29,6 +29,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -46,37 +47,35 @@ nav a {
   transition: color 0.3s;
 }
 nav a:hover {
-  color: #2216a0;
+  color: #1abc9c;
 }
 
-/* Загальні стилі для секцій */
+/* ---------------- SECTIONS ---------------- */
 section, .about-section {
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 60px auto; /* більше повітря */
   background: #fff;
-  padding: 30px 40px;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   scroll-margin-top: 120px;
 }
 
-/* Заголовки секцій */
 section h2, 
 .about-section h2 {
   margin-top: 0;
-  border-bottom: 2px solid #1abc9c;
   padding-bottom: 8px;
-  color: #000; /* чорний у світлій темі */
+  color: #000;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body.dark-theme section h2, 
 body.dark-theme .about-section h2 {
-  color: #d7dde4; /* світло-сірий у темній темі */
+  color: #d7dde4;
 }
 
-
-/* Про мене */
+/* ---------------- ABOUT ---------------- */
 .about-section {
   display: flex;
   align-items: center;
@@ -90,17 +89,16 @@ body.dark-theme .about-section h2 {
   text-align: center;
 }
 
-/* Посилання у header, footer та темній темі */
 header a, footer a, body.dark-theme a {
   color: #ebeaf3;
   text-decoration: none;
   transition: color 0.3s;
 }
 header a:hover, footer a:hover, body.dark-theme a:hover {
-  color: #ebeaf3;
+  color: #1abc9c;
 }
 
-/* ---------------- ПРОЕКТИ ---------------- */
+/* ---------------- PROJECTS ---------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,7 +121,6 @@ header a:hover, footer a:hover, body.dark-theme a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* iframe-прев’ю замість img */
 .project-card iframe {
   width: 100%;
   height: 180px;
@@ -134,12 +131,15 @@ header a:hover, footer a:hover, body.dark-theme a:hover {
 
 .project-info {
   padding: 20px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-info h3 {
   margin: 0 0 10px;
   font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .project-info p {
@@ -150,20 +150,24 @@ header a:hover, footer a:hover, body.dark-theme a:hover {
 
 .project-info .btn {
   display: inline-block;
-  padding: 8px 15px;
-  background: #2216a0;
+  padding: 10px 18px;
+  background: #1abc9c;
   color: #fff;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: fit-content;
+  align-self: flex-start;
 }
 
 .project-info .btn:hover {
-  background: #2216a0;
-  transform: translateY(-2px) scale(1.02);
+  background: #16a085;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Темна тема */
+/* ---------------- DARK THEME ---------------- */
 body.dark-theme {
   background: #181c23;
   color: #eaeaea;
@@ -180,7 +184,7 @@ body.dark-theme .about-text {
   color: #eaeaea;
 }
 body.dark-theme .tag {
-  background-color: #2216a0;
+  background-color: #1abc9c;
   color: #fff;
 }
 body.dark-theme .project-card {
@@ -190,15 +194,8 @@ body.dark-theme .project-card {
 body.dark-theme .project-info p {
   color: #ccc;
 }
-body.dark-theme .project-info .btn {
-  background: #2216a0;
-  color: #fff;
-}
-body.dark-theme .project-info .btn:hover {
-  background: #2216a0;
-}
 
-/* Навички */
+/* ---------------- SKILLS ---------------- */
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
@@ -207,36 +204,52 @@ body.dark-theme .project-info .btn:hover {
 }
 
 .tag {
-  background-color: #2216a0;
+  background-color: #1abc9c;
   color: white;
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .tag:hover {
-  background-color: #2216a0;
-  cursor: default;
+  background-color: #16a085;
+  transform: scale(1.05);
 }
 
+/* ---------------- PHOTO ---------------- */
 .profile-photo {
   display: block;
   margin: 20px auto;
   width: 250px;
   height: auto;
-  max-width: 90%;
   border-radius: 18px;
   box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
   border: 6px solid #fff;
   background: #eaeaea;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 600px) {
   .profile-photo {
     width: 140px;
-    border-radius: 18px;
+    height: auto;
   }
   header h1 {
     font-size: 1.4rem;
@@ -259,4 +272,5 @@ body.dark-theme .project-info .btn:hover {
   }
 }
 
+/* ---------------- FONTS ---------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');

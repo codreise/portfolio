@@ -13,8 +13,6 @@ const weatherInfo = document.getElementById('weatherInfo');
 const cityForm = document.getElementById('cityForm');
 const cityInput = document.getElementById('cityInput');
 const apiKey = '74edfad5154a489883b150505251906';
-
-// Словник транслітерації для популярних міст
 const cityMap = {
   'київ': 'Kyiv',
   'львів': 'Lviv',
@@ -62,10 +60,8 @@ function getWeather(cityName) {
     });
 }
 
-// Показати погоду для Києва при завантаженні
 getWeather('Київ');
 
-// Обробка форми
 cityForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const city = cityInput.value.trim();
