@@ -12,7 +12,7 @@ document.body.innerHTML = `
 const weatherInfo = document.getElementById('weatherInfo');
 const cityForm = document.getElementById('cityForm');
 const cityInput = document.getElementById('cityInput');
-const apiKey = '74edfad5154a489883b150505251906';
+const apiKey = 'e3a904f01832177fa74ec3ac4c2e0a26';
 const cityMap = {
   'київ': 'Kyiv',
   'львів': 'Lviv',
