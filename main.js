@@ -30,7 +30,17 @@ app.innerHTML = `
   <section id="skills">
     <h2>Навички</h2>
     <div class="skills-tags">
-      ${['HTML5','CSS3','JavaScript','React','Node.js','Git','GitHub','Адаптивна верстка','Базова англійська']
+      <h3>Frontend</h3>
+      ${['HTML5','CSS3','JavaScript','React','Адаптивна верстка']
+        .map(skill => `<span class="tag">${skill}</span>`).join('')}
+      <h3>Backend</h3>
+      ${['Node.js','Express','PostgreSQL','MongoDB']
+        .map(skill => `<span class="tag">${skill}</span>`).join('')}
+      <h3>Інструменти</h3>
+      ${['Git','GitHub','Docker']
+        .map(skill => `<span class="tag">${skill}</span>`).join('')}
+      <h3>Soft Skills</h3>
+      ${['Базова англійська','Командна робота']
         .map(skill => `<span class="tag">${skill}</span>`).join('')}
     </div>
   </section>
@@ -44,7 +54,7 @@ app.innerHTML = `
         <div class="project-info">
           <h3>ToDo App</h3>
           <p>Простий список справ з використанням JavaScript і localStorage.</p>
-          <a href="projects/todo-app/index.html" target="_blank" class="btn">Переглянути</a>
+          <a href="projects/todo-app/index.html" target="_blank" class="btn">Демо</a>
         </div>
       </div>
 
@@ -53,7 +63,7 @@ app.innerHTML = `
         <div class="project-info">
           <h3>Weather Dashboard</h3>
           <p>Додаток для перегляду погоди у містах.</p>
-          <a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a>
+          <a href="projects/weather/index.html" target="_blank" class="btn">Демо</a>
         </div>
       </div>
 
@@ -63,6 +73,7 @@ app.innerHTML = `
   <section id="resume">
     <h2>Резюме</h2>
     <a href="assets/resume.pdf" download class="download-resume-btn">📄 Завантажити резюме</a>
+    <a href="assets/resume.pdf" target="_blank" class="btn">👀 Переглянути онлайн</a>
   </section>
 
   <section id="contact">
@@ -70,6 +81,7 @@ app.innerHTML = `
     <p>Email: <a href="mailto:kirichenkod092@gmail.com">kirichenkod092@gmail.com</a></p>
     <p>Telegram: <a href="https://t.me/kirichenko_d" target="_blank">@kirichenko_d</a></p>
     <p>GitHub: <a href="https://github.com/codreise" target="_blank">github.com/codreise</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/%D0%B4%D0%BC%D0%B8%D1%82%D1%80%D0%BE-%D0%BA%D1%96%D1%80%D1%96%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-6387b6270/" target="_blank">linkedin.com/in/dmytro-kirichenko</a></p>
   </section>
 
   <footer>
@@ -90,17 +102,3 @@ if (btn) {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
-
-const animatedSections = document.querySelectorAll('.animate-on-scroll');
-
-function handleScrollAnimation() {
-  animatedSections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      section.classList.add('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', handleScrollAnimation);
-window.addEventListener('load', handleScrollAnimation);
