@@ -72,8 +72,8 @@ app.innerHTML = `
 
   <section id="resume">
     <h2>Резюме</h2>
-    <a href="assets/resume.pdf" download class="download-resume-btn">📄 Завантажити резюме</a>
-    <a href="assets/resume.pdf" target="_blank" class="btn">👀 Переглянути онлайн</a>
+    <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="download-resume-btn">📄 Завантажити резюме</a>
+    <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" target="_blank" class="btn">👀 Переглянути онлайн</a>
   </section>
 
   <section id="contact">
