@@ -222,6 +222,15 @@ body.dark-theme .btn-secondary { color: var(--muted); }
   .timeline-item strong { display: block; margin-top: 5px; color: var(--ink); font-size: 1.02rem; }
   .timeline-item strong small { color: var(--muted); font-size: .82em; font-weight: 500; }
   .timeline-item p { max-width: 650px; margin: 6px 0 0; color: var(--muted); font-size: .9rem; }
+.certificate-card { max-width: 560px; margin-top: 16px; padding: 15px 16px; border: 1px solid var(--line); background: var(--panel); display: grid; gap: 5px; }
+.certificate-label { color: var(--primary); font-family: 'DM Mono', monospace; font-size: .64rem; letter-spacing: .12em; }
+.certificate-card strong { color: var(--ink); font-size: .95rem; font-weight: 700; }
+.certificate-meta { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .68rem; }
+.certificate-link { justify-self: start; margin-top: 8px; padding: 7px 10px; border: 1px solid rgba(232,184,109,.55); color: var(--primary); font-family: 'DM Mono', monospace; font-size: .68rem; text-decoration: none; transition: background var(--ease), color var(--ease), border-color var(--ease); }
+.certificate-link:hover, .certificate-link:focus-visible { background: var(--primary); border-color: var(--primary); color: var(--page); }
+body.dark-theme .certificate-card { background: var(--panel-deep); }
+body.dark-theme .certificate-link { border-color: rgba(103,80,164,.55); }
+body.dark-theme .certificate-link:hover, body.dark-theme .certificate-link:focus-visible { background: var(--primary); color: #fff; }
 #contact { padding-bottom: 70px; }
 .contact-cta { max-width: 720px; }
 .contact-cta h2 { max-width: 650px; font-size: clamp(2.2rem, 5vw, 4.5rem); }
