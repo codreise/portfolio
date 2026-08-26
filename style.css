@@ -245,3 +245,37 @@ body.dark-theme #skills .skill-group { background: linear-gradient(135deg, var(-
   #skills .skill-group { padding: 20px; }
 }
 /* GitHub Pages keeps the relative /portfolio/ asset paths intact. */
+
+/* Light theme palette: neutral surfaces with restrained lavender signals. */
+body.dark-theme {
+  --page: #f6f6f8;
+  --panel: #efeff2;
+  --panel-deep: #ffffff;
+  --ink: #1d1d22;
+  --muted: #64646f;
+  --quiet: #64646f;
+  --primary: #5b4fa3;
+  --primary-dark: #463b85;
+  --signal-soft: #5b4fa3;
+  --line: #dedeE4;
+  --shadow: 0 22px 60px rgba(25, 25, 35, 0.07);
+  background: var(--page);
+  color: var(--ink);
+}
+body.dark-theme::before { opacity: .06; background: linear-gradient(90deg, rgba(91,79,163,.08) 1px, transparent 1px); }
+body.dark-theme header { background: rgba(255,255,255,.94); }
+body.dark-theme section, body.dark-theme .about-section, body.dark-theme header { border-color: var(--line); }
+body.dark-theme .card, body.dark-theme .front-content, body.dark-theme .skill-group, body.dark-theme .project-card, body.dark-theme .contact-link { background: var(--panel-deep); }
+body.dark-theme .project-info { background: var(--panel-deep); }
+body.dark-theme .skill-group { background: var(--panel-deep); }
+body.dark-theme .skill-tags span, body.dark-theme .tech-tags span { background: var(--panel); border-color: var(--line); }
+body.dark-theme .hero-caption { background: var(--page); }
+body.dark-theme .btn-primary, body.dark-theme nav .resume-btn { background: var(--primary); color: #fff; }
+body.dark-theme .btn-primary:hover, body.dark-theme nav .resume-btn:hover { background: var(--primary-dark); color: #fff; }
+body.dark-theme .btn-secondary { border-color: var(--line); color: var(--muted); }
+body.dark-theme .btn-secondary:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+body.dark-theme .content { background: var(--primary); color: #fff; }
+body.dark-theme .content p { color: #fff; }
+body.dark-theme .toggle-scene:hover .bulb { filter: drop-shadow(0 0 10px rgba(216,155,69,.55)); }
+body.dark-theme .project-shot { filter: none; }
+body.dark-theme .profile-photo, body.dark-theme .profile-photo:hover { filter: none; }
