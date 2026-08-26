@@ -438,3 +438,19 @@ nav .resume-btn:hover { background: transparent; color: var(--primary); }
   nav a::after,
   nav .resume-btn::after { transition: none; }
 }
+
+/* Hero's Journey preview: restrained pixel-RPG signal treatment. */
+.hero-shot { position: relative; isolation: isolate; transition: box-shadow var(--ease), transform var(--ease); }
+.hero-shot::after { content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0; pointer-events: none; background: linear-gradient(120deg, rgba(122, 86, 180, .28), transparent 44%, rgba(42, 174, 135, .24)); transition: opacity .35s ease; }
+.project-card:hover .hero-shot::after { opacity: 1; }
+.hero-mini-banner { display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 10px 12px; border: 1px solid rgba(180, 142, 244, .42); background: linear-gradient(110deg, rgba(44, 34, 63, .86), rgba(20, 65, 55, .72)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); font-family: 'DM Mono', monospace; image-rendering: pixelated; }
+.hero-pixel-mark, .hero-pixel-spark { display: inline-flex; width: 25px; height: 25px; align-items: center; justify-content: center; color: #c8a7ff; font-size: 1.1rem; text-shadow: 2px 2px 0 rgba(0,0,0,.35); }
+.hero-pixel-spark { margin-left: auto; color: #75e0b4; font-size: .72rem; }
+.hero-pixel-copy { color: rgba(239,235,249,.7); font-size: .52rem; line-height: 1.35; letter-spacing: .12em; }
+.hero-pixel-copy b { color: #f1ecff; font-size: .7rem; letter-spacing: .04em; }
+.hero-shot-status { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: rgba(239,235,249,.72); font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: .08em; }
+.hero-shot-status span { display: inline-flex; align-items: center; gap: 5px; }
+.hero-shot-status em { padding: 2px 5px; border: 1px solid rgba(239,235,249,.22); color: rgba(239,235,249,.8); font-style: normal; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #75e0b4; box-shadow: 0 0 8px rgba(117,224,180,.7); }
+@media (prefers-reduced-motion: reduce) { .hero-shot::after { transition: none; } }
+@media (max-width: 560px) { .hero-mini-banner { min-height: 52px; padding: 8px 10px; } .hero-pixel-copy b { font-size: .62rem; } }
