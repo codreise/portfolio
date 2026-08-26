@@ -11,7 +11,8 @@ window.onload = () => {
             ? `<a href="#${id}" class="resume-btn">Резюме</a>`
             : `<a href="#${id}">${{about:'Про мене',skills:'Навички',projects:'Проекти',contact:'Контакти'}[id]||id}</a>`
         ).join('')}
-        <svg class="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 197.451 481.081">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 197.451 481.081">
           <defs>
             <marker id="a" orient="auto" overflow="visible" refX="0" refY="0">
               <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z" />
@@ -48,6 +49,7 @@ window.onload = () => {
             <path class="bulb__shine" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M-789.19 757.501a45.897 45.897 0 013.915-36.189 45.897 45.897 0 0129.031-21.957" />
           </g>
         </svg>
+        </button>
       </nav>
     </header>
 
@@ -202,6 +204,11 @@ function initLamp() {
       yoyo: true
     }));
   }
+
+  const THEME_TOGGLE = document.querySelector('.theme-toggle');
+  THEME_TOGGLE.addEventListener('click', event => {
+    if (event.target === event.currentTarget) CORD_TL.restart();
+  });
 
   Draggable.create(PROXY, {
     trigger: HIT,
