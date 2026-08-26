@@ -148,8 +148,34 @@ window.onload = () => {
   `;
 
   initLamp();
+  initSkillProficiency();
   initPageEnhancements();
 };
+
+function initSkillProficiency() {
+  const levels = {
+    JavaScript: ['Advanced', 85],
+    React: ['Intermediate', 75],
+    HTML5: ['Advanced', 90],
+    CSS3: ['Advanced', 90],
+    'Node.js': ['Intermediate', 70],
+    Express: ['Intermediate', 70],
+    PostgreSQL: ['Intermediate', 65],
+    MongoDB: ['Basic', 50],
+    Git: ['Advanced', 80],
+    Docker: ['Basic', 45]
+  };
+
+  document.querySelectorAll('#skills .skill-tags > span').forEach(tag => {
+    const name = tag.textContent.trim();
+    const level = levels[name];
+    if (!level) return;
+    const icon = tag.querySelector('.tech-logo')?.outerHTML || '';
+    tag.classList.add('skill-item');
+    tag.innerHTML = `${icon}<span class="skill-item__body"><span class="skill-item__top"><span class="skill-item__name">${name}</span><span class="skill-item__level">${level[0]} · ${level[1]}%</span></span><span class="skill-item__track" aria-hidden="true"><span class="skill-item__fill" style="width: ${level[1]}%"></span></span></span>`;
+    tag.setAttribute('aria-label', `${name}: ${level[0]}, ${level[1]}%`);
+  });
+}
 
 function initPageEnhancements() {
   const links = [...document.querySelectorAll('nav a[href^="#"]')];
