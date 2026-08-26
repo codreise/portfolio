@@ -79,8 +79,8 @@ window.onload = () => {
         <p class="section-eyebrow">ПРОФЕСІЙНИЙ ФОКУС</p>
         <h2>Про мене</h2>
         <div class="about-copy">
-          <p>Мотивований Junior Full Stack Developer, швидко навчаюсь та прагну створювати зрозумілі, зручні й стабільні веб-додатки. Орієнтований на професійний розвиток, командну співпрацю й постійне вдосконалення технічних навичок.</p>
-          <p>Працюю з JavaScript, React і Node.js, маю практичні навички роботи з HTML, CSS, PostgreSQL та використовую Git / GitHub для контролю версій.</p>
+          <p>Мотивований <strong>Junior Full Stack Developer</strong>, швидко навчаюсь та прагну створювати зрозумілі, зручні й стабільні вебзастосунки.</p>
+          <p>Орієнтований на професійний розвиток і командну співпрацю. Спеціалізуюся на <strong>JavaScript</strong>, <strong>React</strong> та <strong>Node.js</strong>, а також маю практичний досвід роботи з HTML, CSS, PostgreSQL та Git / GitHub.</p>
         </div>
         <div class="tech-tags" aria-label="Основні технології">
           <span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Git</span>

@@ -153,9 +153,12 @@ body.dark-theme footer { color: var(--quiet); }
 .hero-caption { position: absolute; right: 0; bottom: 0; margin: 0; padding: 7px 10px; color: var(--primary); background: var(--page); font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .12em; }
 .about-section { min-height: 0 !important; display: block !important; padding: clamp(48px, 7vw, 82px) 0; }
 .about-section .about-text { max-width: 760px; }
-.about-section h2 { margin-bottom: 22px; font-size: clamp(2rem, 4vw, 3.5rem); }
-.about-copy { display: grid; gap: 12px; }
+.about-section h2 { margin-bottom: 18px; font-size: clamp(1.9rem, 3.6vw, 3.15rem); }
+.about-copy { display: grid; gap: 16px; }
 .about-copy p { max-width: 730px; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+.about-copy strong { color: var(--ink); font-weight: 700; }
+.about-copy p { color: #d4d4d8; }
+body.dark-theme .about-copy p { color: var(--muted); }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
 .tech-tags span { padding: 6px 10px; border: 1px solid var(--line); color: var(--signal-soft); font-family: 'DM Mono', monospace; font-size: .68rem; }
 header { padding: 13px 0 11px; }
