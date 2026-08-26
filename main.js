@@ -91,11 +91,12 @@ window.onload = () => {
     <section id="skills">
       <p class="section-eyebrow">ІНСТРУМЕНТАРІЙ</p>
       <h2>Навички</h2>
-      <div class="skills-groups">
-        <div class="skill-group"><h3>Frontend</h3><div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span></div></div>
-        <div class="skill-group"><h3>Backend</h3><div class="skill-tags"><span>Node.js</span><span>Express</span></div></div>
-        <div class="skill-group"><h3>Databases</h3><div class="skill-tags"><span>PostgreSQL</span><span>MongoDB</span></div></div>
-        <div class="skill-group"><h3>Tools</h3><div class="skill-tags"><span>Git</span><span>Docker</span><span>Командна робота</span><span>Англійська</span></div></div>
+      <p class="skills-intro">Технології, які використовую для створення сучасних вебзастосунків.</p>
+      <div class="skills-bento">
+        <article class="skill-group skill-group-large"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3></div><div class="skill-tags"><span class="skill-tag-featured"><b aria-hidden="true">JS</b>JavaScript</span><span class="skill-tag-featured"><b aria-hidden="true">R</b>React</span><span><b aria-hidden="true">H</b>HTML5</span><span><b aria-hidden="true">C</b>CSS3</span></div></article>
+        <article class="skill-group skill-group-large"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">{ }</span><h3>Backend</h3></div><div class="skill-tags"><span class="skill-tag-featured"><b aria-hidden="true">N</b>Node.js</span><span class="skill-tag-featured"><b aria-hidden="true">E</b>Express</span></div></article>
+        <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">DB</span><h3>Databases</h3></div><div class="skill-tags"><span><b aria-hidden="true">P</b>PostgreSQL</span><span><b aria-hidden="true">M</b>MongoDB</span></div></article>
+        <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">↗</span><h3>Tools</h3></div><div class="skill-tags"><span><b aria-hidden="true">G</b>Git</span><span><b aria-hidden="true">D</b>Docker</span><span><b aria-hidden="true">↔</b>Командна робота</span><span><b aria-hidden="true">A</b>Англійська</span></div></article>
       </div>
     </section>
 
@@ -118,7 +119,7 @@ window.onload = () => {
       <p class="section-eyebrow">ДОСВІД І НАВЧАННЯ</p><h2>Резюме</h2>
       <div class="resume-timeline">
         <div class="timeline-item"><span class="year">ПРОФЕСІЙНИЙ ФОКУС</span><strong>Junior Full Stack Developer</strong><p>Професійний розвиток, командна співпраця й постійне вдосконалення технічних навичок.</p></div>
-        <div class="timeline-item"><span class="year">ТЕХНІЧНИЙ СТЕК</span><strong>JavaScript / React / Node.js</strong><p>Практичні навички роботи з HTML, CSS, PostgreSQL та Git / GitHub.</p></div>
+        <div class="timeline-item"><span class="year">ТЕХНІЧНИЙ ��ТЕК</span><strong>JavaScript / React / Node.js</strong><p>Практичні навички роботи з HTML, CSS, PostgreSQL та Git / GitHub.</p></div>
       </div>
       <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="download-resume-btn">Завантажити резюме</a>
       <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" target="_blank" class="btn">Переглянути онлайн</a>
