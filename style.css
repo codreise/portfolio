@@ -505,3 +505,56 @@ nav .resume-btn:hover { background: transparent; color: var(--primary); }
   #skills .skill-group { padding: 16px; }
   #skills .skill-item__level { gap: 4px; font-size: .54rem; }
 }
+
+/* Skills polish: compact glass panels with aligned, low-noise rows. */
+#skills .skills-bento { gap: 12px; }
+#skills .skill-group {
+  min-height: 0;
+  padding: 16px;
+  border: 1px solid rgba(82, 86, 94, .8);
+  background: rgba(20, 22, 26, .5);
+  backdrop-filter: blur(12px);
+  transition: transform var(--ease), border-color var(--ease), box-shadow var(--ease);
+}
+#skills .skill-group:hover {
+  border-color: rgba(232, 184, 109, .55);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .18), 0 0 22px rgba(143, 167, 160, .08);
+}
+#skills .skill-heading { margin-bottom: 12px; }
+#skills .skill-heading h3 { font-size: .92rem; }
+#skills .skill-tags { display: flex; flex-direction: column; gap: 8px; }
+#skills .skill-tags > .skill-item {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 5px 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  font-size: .74rem;
+  transition: color var(--ease), border-color var(--ease), background-color var(--ease), box-shadow var(--ease);
+}
+#skills .skill-tags > .skill-item:hover {
+  border-color: rgba(232, 184, 109, .24);
+  background: rgba(232, 184, 109, .045);
+  color: var(--primary);
+  box-shadow: 0 0 14px rgba(232, 184, 109, .06);
+}
+#skills .skill-item .tech-logo { width: 15px; height: 15px; opacity: .7; }
+#skills .skill-item__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#skills .skill-item__level { gap: 6px; font-size: .56rem; }
+#skills .skill-level-dots { gap: 3px; }
+#skills .skill-level-dot { width: 4px; height: 4px; }
+#skills .skill-item__percent { min-width: 2.2rem; font-size: .6rem; }
+#skills .skills-language { margin-top: 12px; font-size: .65rem; }
+body.dark-theme #skills .skill-group {
+  border-color: rgba(43, 46, 53, .8);
+  background: rgba(24, 25, 30, .5);
+}
+body.dark-theme #skills .skill-group:hover { border-color: rgba(103, 80, 164, .6); box-shadow: 0 12px 28px rgba(0,0,0,.2), 0 0 24px rgba(103,80,164,.1); }
+body.dark-theme #skills .skill-tags > .skill-item:hover { border-color: rgba(103, 80, 164, .35); background: rgba(103, 80, 164, .08); }
+@media (max-width: 700px) {
+  #skills .skill-group { padding: 16px; }
+}
