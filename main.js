@@ -51,11 +51,40 @@ window.onload = () => {
       </nav>
     </header>
 
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker">ВІДКРИТИЙ ДО НОВИХ МОЖЛИВОСТЕЙ</p>
+        <h2 id="hero-title">Дмитро<br /><span>Кіріченко</span></h2>
+        <p class="hero-role">Junior Full-Stack JavaScript Developer</p>
+        <p class="hero-summary">Створюю зрозумілі вебзастосунки, Telegram-ботів та автоматизації, які допомагають вирішувати реальні задачі.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Переглянути проєкти</a>
+          <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="btn btn-secondary">Завантажити резюме</a>
+        </div>
+        <div class="hero-links" aria-label="Соціальні посилання">
+          <a href="https://github.com/codreise" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/дмитро-кіріченко-6387b6270/" target="_blank">LinkedIn</a>
+          <a href="https://t.me/kirichenko_d" target="_blank">Telegram</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <span class="hero-frame" aria-hidden="true"></span>
+        <img src="image/my-photo.jpg" alt="Фото Дмитра Кіріченка" class="profile-photo" />
+        <p class="hero-caption">JS / NODE / REACT</p>
+      </div>
+    </section>
+
     <section id="about" class="about-section">
-      <img src="image/my-photo.jpg" alt="Фото Дмитра Кіріченка" class="profile-photo" />
       <div class="about-text">
+        <p class="section-eyebrow">ПРОФЕСІЙНИЙ ФОКУС</p>
         <h2>Про мене</h2>
-        <p>Мотивований Junior Full Stack Developer, швидко навчаюсь та прагну створювати зрозумілі, зручні й стабільні веб-додатки. Працюю з JavaScript, React і Node.js, маю практичні навички роботи з HTML, CSS, PostgreSQL та використовую Git / GitHub для контролю версій. Також вивчав Express, Formik / Yup, Redux, MongoDB, SQL і Docker. Орієнтований на професійний розвиток, командну співпрацю й постійне вдосконалення технічних навичок у сфері веб-розробки.</p>
+        <div class="about-copy">
+          <p>Мотивований Junior Full Stack Developer, швидко навчаюсь та прагну створювати зрозумілі, зручні й стабільні веб-додатки. Орієнтований на професійний розвиток, командну співпрацю й постійне вдосконалення технічних навичок.</p>
+          <p>Працюю з JavaScript, React і Node.js, маю практичні навички роботи з HTML, CSS, PostgreSQL та використовую Git / GitHub для контролю версій.</p>
+        </div>
+        <div class="tech-tags" aria-label="Основні технології">
+          <span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Git</span>
+        </div>
       </div>
     </section>
 
@@ -96,7 +125,7 @@ window.onload = () => {
           <div class="front-content">Node.js</div>
           <div class="content">
             <p class="heading">Node.js</p>
-            <p>REST API, робота з файлами, асинхронні процеси.</p>
+            <p>REST API, робот�� з файлами, асинхронні процеси.</p>
           </div>
         </div>
         <div class="card from-bottom">
