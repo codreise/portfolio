@@ -172,7 +172,7 @@ function initSkillProficiency() {
     if (!level) return;
     const icon = tag.querySelector('.tech-logo')?.outerHTML || '';
     tag.classList.add('skill-item');
-    tag.innerHTML = `${icon}<span class="skill-item__body"><span class="skill-item__top"><span class="skill-item__name">${name}</span><span class="skill-item__level">${level[0]} · ${level[1]}%</span></span><span class="skill-item__track" aria-hidden="true"><span class="skill-item__fill" style="width: ${level[1]}%"></span></span></span>`;
+    tag.innerHTML = `${icon}<span class="skill-item__name">${name}</span><span class="skill-item__level">${level[0]} · ${level[1]}%</span>`;
     tag.setAttribute('aria-label', `${name}: ${level[0]}, ${level[1]}%`);
   });
 }
