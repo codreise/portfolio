@@ -206,8 +206,9 @@ body.dark-theme .btn-secondary { color: var(--muted); }
 .project-shot strong { font-size: clamp(1.6rem, 3vw, 2.7rem); line-height: 1.02; letter-spacing: -.06em; }
 .project-shot i { align-self: flex-start; padding: 6px 9px; border: 1px solid rgba(255,255,255,.35); font-size: .72rem; font-style: normal; }
 .todo-shot { background: linear-gradient(135deg, #303a3a, #667b70); }
-.weather-shot { background: linear-gradient(135deg, #315b6b, #7e9e9a); }
-.project-featured { grid-column: span 2; display: grid; grid-template-columns: 1.2fr 1fr; }
+  .weather-shot { background: linear-gradient(135deg, #315b6b, #7e9e9a); }
+  .hero-shot { background: linear-gradient(135deg, #252329, #5d5147); }
+  .project-featured { grid-column: span 2; display: grid; grid-template-columns: 1.2fr 1fr; }
 .project-featured .project-shot { min-height: 330px; }
 .project-type { margin: 0 0 12px !important; color: var(--primary) !important; font-family: 'DM Mono', monospace; font-size: .65rem !important; letter-spacing: .12em; }
 .project-actions { display: flex; gap: 10px; margin-top: auto; }

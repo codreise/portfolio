@@ -115,6 +115,10 @@ window.onload = () => {
           <div class="project-shot weather-shot" role="img" aria-label="Статичне прев’ю Weather Dashboard"><span>WEATHER</span><strong>Погода<br />у вашому місті</strong><i>Search city</i></div>
           <div class="project-info"><h3>Weather Dashboard</h3><p>Зручний сервіс для відстеження погодних умов у реальному часі. Реалізовано пошук за містами, відображення прогнозу та інтеграцію з OpenWeather API.</p><div class="project-tech" aria-label="Технології Weather Dashboard"><span>JavaScript</span><span>REST API</span><span>Fetch API</span><span>CSS Grid</span></div><div class="project-actions"><a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a><a href="https://github.com/codreise/portfolio/tree/main/projects/weather" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a></div></div>
         </article>
+        <article class="project-card">
+          <div class="project-shot hero-shot" role="img" aria-label="Статичне прев’ю Hero's Journey"><span>HERO&apos;S JOURNEY</span><strong>Choose your path.<br />Shape your story.</strong><i>Telegram RPG</i></div>
+          <div class="project-info"><h3>Hero&apos;s Journey</h3><p>Інтерактивний Telegram RPG-бот із динамічним сторітелінгом, керуванням характеристиками персонажа та розгалуженими виборами.</p><div class="project-tech" aria-label="Технології Hero's Journey"><span>JavaScript / Node.js</span><span>Telegram Bot API</span><span>React (Web App)</span></div><div class="project-actions"><a href="https://t.me/Her0JourneyBot" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Відкрити Telegram Bot Hero's Journey">Telegram Bot ↗</a><a href="https://github.com/codreise/Hero-s-Journey" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Відкрити GitHub Hero's Journey">GitHub ↗</a></div></div>
+        </article>
       </div>
     </section>
 
