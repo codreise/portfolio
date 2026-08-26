@@ -217,9 +217,11 @@ body.dark-theme .btn-secondary { color: var(--muted); }
 .resume-timeline { border-left: 1px solid var(--primary); padding-left: 22px; margin-bottom: 28px; }
 .timeline-item { position: relative; margin-bottom: 22px; }
 .timeline-item::before { content: ''; position: absolute; width: 7px; height: 7px; left: -27px; top: 9px; background: var(--primary); }
-.timeline-item .year { display: block; color: var(--primary); font-family: 'DM Mono', monospace; font-size: .72rem; }
-.timeline-item strong { display: block; margin-top: 4px; color: var(--ink); }
-.timeline-item p { max-width: 650px; margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+.timeline-item .timeline-label { display: block; margin-bottom: 7px; color: var(--signal-soft); font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .08em; }
+  .timeline-item .year { display: block; color: var(--primary); font-family: 'DM Mono', monospace; font-size: .72rem; }
+  .timeline-item strong { display: block; margin-top: 5px; color: var(--ink); font-size: 1.02rem; }
+  .timeline-item strong small { color: var(--muted); font-size: .82em; font-weight: 500; }
+  .timeline-item p { max-width: 650px; margin: 6px 0 0; color: var(--muted); font-size: .9rem; }
 #contact { padding-bottom: 70px; }
 .contact-cta { max-width: 720px; }
 .contact-cta h2 { max-width: 650px; font-size: clamp(2.2rem, 5vw, 4.5rem); }
