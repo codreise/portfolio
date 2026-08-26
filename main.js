@@ -5,6 +5,7 @@ window.onload = () => {
     <header>
       <h1>Дмитро Кіріченко</h1>
       <p>Full-Stack Developer</p>
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false"><span aria-hidden="true">☰</span></button>
       <nav>
         ${['about','skills','projects','resume','contact'].map(id =>
           id==='resume'
@@ -107,14 +108,6 @@ window.onload = () => {
       <p class="section-eyebrow">ВИБРАНІ РОБОТИ</p>
       <h2>Проєкти</h2>
       <div class="projects-grid">
-        <article class="project-card project-featured">
-          <div class="project-shot todo-shot" role="img" aria-label="Статичне прев’ю ToDo App"><span>TODO</span><strong>Tasks that move<br />work forward.</strong><i>＋ Add task</i></div>
-          <div class="project-info"><h3>ToDo App</h3><p>Інтерактивний менеджер завдань для планування щоденних справ. Підтримує фільтрацію за статусом, збереження стану в localStorage та швидке редагування.</p><div class="project-tech" aria-label="Технології ToDo App"><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>localStorage</span></div><div class="project-actions"><a href="projects/todo-app/index.html" target="_blank" class="btn">Переглянути</a><a href="https://github.com/codreise/portfolio/tree/main/projects/todo-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a></div></div>
-        </article>
-        <article class="project-card">
-          <div class="project-shot weather-shot" role="img" aria-label="Статичне прев’ю Weather Dashboard"><span>WEATHER</span><strong>Погода<br />у вашому місті</strong><i>Search city</i></div>
-          <div class="project-info"><h3>Weather Dashboard</h3><p>Зручний сервіс для відстеження погодних умов у реальному часі. Реалізовано пошук за містами, відображення прогнозу та інтеграцію з OpenWeather API.</p><div class="project-tech" aria-label="Технології Weather Dashboard"><span>JavaScript</span><span>REST API</span><span>Fetch API</span><span>CSS Grid</span></div><div class="project-actions"><a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a><a href="https://github.com/codreise/portfolio/tree/main/projects/weather" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a></div></div>
-        </article>
         <article class="project-card">
           <div class="project-shot hero-shot" role="img" aria-label="Статичне прев’ю Hero's Journey"><div class="hero-mini-banner" aria-hidden="true"><span class="hero-pixel-mark">✦</span><span class="hero-pixel-copy">QUEST LOG<br /><b>HERO’S JOURNEY</b></span><span class="hero-pixel-spark">◆</span></div><div class="hero-shot-status"><span><b class="status-dot"></b> ONLINE</span><em>v1.0</em></div><span>HERO&apos;S JOURNEY</span><strong>Choose your path.<br />Shape your story.</strong><i>Telegram RPG</i></div>
           <div class="project-info"><h3>Hero&apos;s Journey</h3><p>Інтерактивний Telegram RPG-бот із динамічним сторітелінгом, керуванням характеристиками персонажа та розгалуженими виборами.</p><div class="project-tech" aria-label="Технології Hero's Journey"><span>JavaScript / Node.js</span><span>Telegram Bot API</span><span>React (Web App)</span></div><div class="project-actions"><a href="https://t.me/Her0JourneyBot" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Відкрити Telegram Bot Hero's Journey">Telegram Bot ↗</a><a href="https://github.com/codreise/Hero-s-Journey" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Відкрити GitHub Hero's Journey">GitHub ↗</a></div></div>
@@ -184,6 +177,19 @@ function initSkillProficiency() {
 }
 
 function initPageEnhancements() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Закрити меню' : 'Відкрити меню');
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Відкрити меню');
+  }));
+
   const links = [...document.querySelectorAll('nav a[href^="#"]')];
   const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
   const observer = new IntersectionObserver(entries => {
