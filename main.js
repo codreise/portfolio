@@ -172,7 +172,9 @@ function initSkillProficiency() {
     if (!level) return;
     const icon = tag.querySelector('.tech-logo')?.outerHTML || '';
     tag.classList.add('skill-item');
-    tag.innerHTML = `${icon}<span class="skill-item__name">${name}</span><span class="skill-item__level">${level[0]} · ${level[1]}%</span>`;
+    const filledDots = Math.round(level[1] / 20);
+    const dots = Array.from({ length: 5 }, (_, index) => `<span class="skill-level-dot${index < filledDots ? ' is-filled' : ''}" aria-hidden="true"></span>`).join('');
+    tag.innerHTML = `${icon}<span class="skill-item__name">${name}</span><span class="skill-item__level"><span class="skill-level-dots">${dots}</span><span class="skill-item__percent">${level[1]}%</span></span>`;
     tag.setAttribute('aria-label', `${name}: ${level[0]}, ${level[1]}%`);
   });
 }

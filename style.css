@@ -380,3 +380,13 @@ body.dark-theme .profile-photo, body.dark-theme .profile-photo:hover { filter: n
 @media (max-width: 560px) {
   .back-to-top { right: 16px; bottom: 16px; }
 }
+
+/* Minimal skill proficiency markers: restrained dots keep the list readable. */
+#skills .skill-item__level { display: inline-flex; align-items: center; justify-content: flex-end; gap: 7px; color: var(--muted); }
+#skills .skill-level-dots { display: inline-flex; align-items: center; gap: 3px; }
+#skills .skill-level-dot { width: 4px; height: 4px; border-radius: 50%; background: currentColor; opacity: .2; }
+#skills .skill-level-dot.is-filled { background: var(--primary); opacity: .9; box-shadow: 0 0 5px color-mix(in srgb, var(--primary) 35%, transparent); }
+#skills .skill-item__percent { min-width: 2.45rem; color: var(--primary); font-size: .62rem; font-weight: 600; text-align: right; }
+#skills .tech-logo { color: var(--muted); opacity: .7; transition: opacity var(--ease), color var(--ease); }
+#skills .skill-item:hover .tech-logo { color: var(--primary); opacity: 1; }
+#skills .skill-item__name { font-weight: 500; }
