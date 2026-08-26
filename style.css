@@ -254,13 +254,13 @@ nav a.is-active { color: var(--primary); }
 #skills .skill-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
 #skills .skill-heading h3 { margin: 0; color: var(--ink); font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: -.03em; text-transform: none; }
 #skills .skill-icon { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; color: var(--primary); font-family: 'DM Mono', monospace; font-size: .6rem; }
-#skills .skill-tags { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 8px; }
-#skills .skill-tags span { display: flex; align-items: center; gap: 7px; min-width: 0; padding: 7px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font-size: .78rem; transition: color var(--ease), border-color var(--ease); }
-#skills .skill-tags span:hover { border-color: var(--primary); background: transparent; color: var(--primary); }
+#skills .skill-tags { display: flex; flex-direction: column; gap: 10px; }
+#skills .skill-tags span { min-width: 0; border: 0; background: transparent; color: var(--ink); font-size: .78rem; transition: color var(--ease); }
+#skills .skill-tags span:hover { border: 0; background: transparent; color: var(--primary); }
 #skills .skill-tags b { display: none; }
 #skills .tech-logo { width: 16px; height: 16px; flex: 0 0 16px; fill: currentColor; color: var(--primary); opacity: .85; }
-#skills .skill-item { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; align-items: center; gap: 7px; padding: 7px 0; }
-#skills .skill-item__name { min-width: 0; color: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#skills .skill-item { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 0; }
+#skills .skill-item__name { min-width: 0; color: inherit; white-space: nowrap; }
 #skills .skill-item__level { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .59rem; white-space: nowrap; }
 #skills .skill-item:hover .skill-item__level { color: var(--primary); }
 #skills .skills-language { margin: 16px 0 0; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: .03em; }
