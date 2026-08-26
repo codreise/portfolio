@@ -94,22 +94,22 @@ section h2::before, .about-section h2::before { content: '// '; color: var(--pri
 footer { max-width: 1280px; margin: 38px auto 0; color: var(--quiet); font-family: 'DM Mono', monospace; font-size: .72rem; }
 
 body.dark-theme {
-  --primary: #287d70;
-  --primary-dark: #1f665c;
-  --signal-soft: #287d70;
-  --page: #f3f6f5;
-  --panel: #e8efed;
+  --primary: #6750a4;
+  --primary-dark: #513c88;
+  --signal-soft: #6750a4;
+  --page: #f7f6fb;
+  --panel: #efedf6;
   --panel-deep: #ffffff;
-  --ink: #18201e;
-  --muted: #5d6b67;
-  --quiet: #71807b;
-  --line: #d5dfdc;
-  --shadow: 0 22px 60px rgba(36,64,58,.12);
+  --ink: #20202a;
+  --muted: #686779;
+  --quiet: #77758a;
+  --line: #ddd9e8;
+  --shadow: 0 22px 60px rgba(46,39,65,.08);
   --bulb-accent: #d89b45;
   background: var(--page);
   color: var(--ink);
 }
-body.dark-theme::before { opacity: .08; background: linear-gradient(90deg, rgba(40,125,112,.08) 1px, transparent 1px); }
+body.dark-theme::before { opacity: .08; background: linear-gradient(90deg, rgba(103,80,164,.08) 1px, transparent 1px); }
 body.dark-theme header { background: rgba(255,255,255,.94); }
 body.dark-theme header h1, body.dark-theme section h2, body.dark-theme .about-text h2, body.dark-theme .project-info h3 { color: var(--ink); }
 body.dark-theme nav a, body.dark-theme .about-text p, body.dark-theme .project-info p, body.dark-theme #contact p { color: var(--muted); }
