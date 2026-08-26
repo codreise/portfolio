@@ -5,6 +5,7 @@ window.onload = () => {
     <header>
       <h1>Дмитро Кіріченко</h1>
       <p>Full-Stack Developer</p>
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false"><span aria-hidden="true">☰</span></button>
       <nav>
         ${['about','skills','projects','resume','contact'].map(id =>
           id==='resume'
@@ -184,6 +185,19 @@ function initSkillProficiency() {
 }
 
 function initPageEnhancements() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Закрити меню' : 'Відкрити меню');
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Відкрити меню');
+  }));
+
   const links = [...document.querySelectorAll('nav a[href^="#"]')];
   const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
   const observer = new IntersectionObserver(entries => {
