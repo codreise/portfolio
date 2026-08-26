@@ -107,11 +107,11 @@ window.onload = () => {
       <div class="projects-grid">
         <article class="project-card project-featured">
           <div class="project-shot todo-shot" role="img" aria-label="Статичне прев’ю ToDo App"><span>TODO</span><strong>Tasks that move<br />work forward.</strong><i>＋ Add task</i></div>
-          <div class="project-info"><p class="project-type">JAVASCRIPT / PRODUCTIVITY</p><h3>ToDo App</h3><p>Простий список справ з використанням JavaScript і localStorage.</p><div class="project-actions"><a href="projects/todo-app/index.html" target="_blank" class="btn">Переглянути</a></div></div>
+          <div class="project-info"><h3>ToDo App</h3><p>Інтерактивний менеджер завдань для планування щоденних справ. Підтримує фільтрацію за статусом, збереження стану в localStorage та швидке редагування.</p><div class="project-tech" aria-label="Технології ToDo App"><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>localStorage</span></div><div class="project-actions"><a href="projects/todo-app/index.html" target="_blank" class="btn">Переглянути</a><a href="https://github.com/codreise/portfolio/tree/main/projects/todo-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a></div></div>
         </article>
         <article class="project-card">
           <div class="project-shot weather-shot" role="img" aria-label="Статичне прев’ю Weather Dashboard"><span>WEATHER</span><strong>Погода<br />у вашому місті</strong><i>Search city</i></div>
-          <div class="project-info"><p class="project-type">JAVASCRIPT / API</p><h3>Weather Dashboard</h3><p>Додаток для перегляду погоди у містах.</p><div class="project-actions"><a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a></div></div>
+          <div class="project-info"><h3>Weather Dashboard</h3><p>Зручний сервіс для відстеження погодних умов у реальному часі. Реалізовано пошук за містами, відображення прогнозу та інтеграцію з OpenWeather API.</p><div class="project-tech" aria-label="Технології Weather Dashboard"><span>JavaScript</span><span>REST API</span><span>Fetch API</span><span>CSS Grid</span></div><div class="project-actions"><a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a><a href="https://github.com/codreise/portfolio/tree/main/projects/weather" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a></div></div>
         </article>
       </div>
     </section>
