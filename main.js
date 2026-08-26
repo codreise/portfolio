@@ -89,134 +89,50 @@ window.onload = () => {
     </section>
 
     <section id="skills">
+      <p class="section-eyebrow">ІНСТРУМЕНТАРІЙ</p>
       <h2>Навички</h2>
-      <div class="skills-grid">
-        <h3>Frontend</h3>
-        <div class="card from-bottom">
-          <div class="front-content">HTML5</div>
-          <div class="content">
-            <p class="heading">HTML5</p>
-            <p>Семантична розмітка, доступність, адаптивні структури.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">CSS3</div>
-          <div class="content">
-            <p class="heading">CSS3</p>
-            <p>Flexbox, Grid, анімації, адаптивна верстка.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">JavaScript</div>
-          <div class="content">
-            <p class="heading">JavaScript</p>
-            <p>ES6+, DOM, API інтеграції, асинхронність.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">React</div>
-          <div class="content">
-            <p class="heading">React</p>
-            <p>Hooks, Context, Redux, створення SPA.</p>
-          </div>
-        </div>
-        <h3>Backend</h3>
-        <div class="card from-bottom">
-          <div class="front-content">Node.js</div>
-          <div class="content">
-            <p class="heading">Node.js</p>
-            <p>REST API, робот�� з файлами, асинхронні процеси.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">Express</div>
-          <div class="content">
-            <p class="heading">Express</p>
-            <p>Маршрутизація, middleware, JWT‑автентифікація.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">PostgreSQL</div>
-          <div class="content">
-            <p class="heading">PostgreSQL</p>
-            <p>SQL‑запити, реляційні бази даних, оптимізація.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">MongoDB</div>
-          <div class="content">
-            <p class="heading">MongoDB</p>
-            <p>NoSQL, колекції, інтеграція з Node.js.</p>
-          </div>
-        </div>
-        <h3>Інструменти</h3>
-        <div class="card from-bottom">
-          <div class="front-content">Git</div>
-          <div class="content">
-            <p class="heading">Git</p>
-            <p>Контроль версій, гілки, merge, pull requests.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">Docker</div>
-          <div class="content">
-            <p class="heading">Docker</p>
-            <p>Контейнери, деплоймент, конфігурація середовищ.</p>
-          </div>
-        </div>
-        <h3>Soft Skills</h3>
-        <div class="card from-bottom">
-          <div class="front-content">Командна робота</div>
-          <div class="content">
-            <p class="heading">Командна робота</p>
-            <p>Ефективна комунікація, співпраця, адаптивність.</p>
-          </div>
-        </div>
-        <div class="card from-bottom">
-          <div class="front-content">Англійська</div>
-          <div class="content">
-            <p class="heading">Англійська</p>
-            <p>Базовий рівень для читання документації та спілкування.</p>
-          </div>
-        </div>
+      <div class="skills-groups">
+        <div class="skill-group"><h3>Frontend</h3><div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span></div></div>
+        <div class="skill-group"><h3>Backend</h3><div class="skill-tags"><span>Node.js</span><span>Express</span></div></div>
+        <div class="skill-group"><h3>Databases</h3><div class="skill-tags"><span>PostgreSQL</span><span>MongoDB</span></div></div>
+        <div class="skill-group"><h3>Tools</h3><div class="skill-tags"><span>Git</span><span>Docker</span><span>Командна робота</span><span>Англійська</span></div></div>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Проекти</h2>
+      <p class="section-eyebrow">ВИБРАНІ РОБОТИ</p>
+      <h2>Проєкти</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <iframe src="projects/todo-app/index.html" title="ToDo App Preview"></iframe>
-          <div class="project-info">
-            <h3>ToDo App</h3>
-            <p>Простий список справ з використанням JavaScript і localStorage.</p>
-            <a href="projects/todo-app/index.html" target="_blank" class="btn">Демо</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <iframe src="projects/weather/index.html" title="Weather Dashboard Preview"></iframe>
-          <div class="project-info">
-            <h3>Weather Dashboard</h3>
-            <p>Додаток для перегляду погоди у містах.</p>
-            <a href="projects/weather/index.html" target="_blank" class="btn">Демо</a>
-          </div>
-        </div>
+        <article class="project-card project-featured">
+          <div class="project-shot todo-shot" role="img" aria-label="Статичне прев’ю ToDo App"><span>TODO</span><strong>Tasks that move<br />work forward.</strong><i>＋ Add task</i></div>
+          <div class="project-info"><p class="project-type">JAVASCRIPT / PRODUCTIVITY</p><h3>ToDo App</h3><p>Простий список справ з використанням JavaScript і localStorage.</p><div class="project-actions"><a href="projects/todo-app/index.html" target="_blank" class="btn">Переглянути</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-shot weather-shot" role="img" aria-label="Статичне прев’ю Weather Dashboard"><span>WEATHER</span><strong>Погода<br />у вашому місті</strong><i>Search city</i></div>
+          <div class="project-info"><p class="project-type">JAVASCRIPT / API</p><h3>Weather Dashboard</h3><p>Додаток для перегляду погоди у містах.</p><div class="project-actions"><a href="projects/weather/index.html" target="_blank" class="btn">Переглянути</a></div></div>
+        </article>
       </div>
     </section>
 
     <section id="resume">
-      <h2>Резюме</h2>
-      <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="download-resume-btn">📄 Завантажити резюме</a>
-      <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" target="_blank" class="btn">👀 Переглянути онлайн</a>
+      <p class="section-eyebrow">ДОСВІД І НАВЧАННЯ</p><h2>Резюме</h2>
+      <div class="resume-timeline">
+        <div class="timeline-item"><span class="year">ПРОФЕСІЙНИЙ ФОКУС</span><strong>Junior Full Stack Developer</strong><p>Професійний розвиток, командна співпраця й постійне вдосконалення технічних навичок.</p></div>
+        <div class="timeline-item"><span class="year">ТЕХНІЧНИЙ СТЕК</span><strong>JavaScript / React / Node.js</strong><p>Практичні навички роботи з HTML, CSS, PostgreSQL та Git / GitHub.</p></div>
+      </div>
+      <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="download-resume-btn">Завантажити резюме</a>
+      <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" target="_blank" class="btn">Переглянути онлайн</a>
     </section>
 
-    <section id="contact">
-      <h2>Контакти</h2>
-      <p>Email: <a href="mailto:kirichenkod092@gmail.com">kirichenkod092@gmail.com</a></p>
-      <p>Telegram: <a href="https://t.me/kirichenko_d" target="_blank">@kirichenko_d</a></p>
-      <p>GitHub: <a href="https://github.com/codreise" target="_blank">github.com/codreise</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/дмитро-кіріченко-6387b6270/" target="_blank">linkedin.com/in/dmytro-kirichenko</a></p>
-    </section>
+    <section id="contact"><div class="contact-cta">
+      <p class="section-eyebrow">КОНТАКТИ</p><h2>Маєте проєкт або пропозицію? Обговорімо</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:kirichenkod092@gmail.com">Email<br /><strong>kirichenkod092@gmail.com</strong></a>
+        <a class="contact-link" href="https://t.me/kirichenko_d" target="_blank">Telegram<br /><strong>@kirichenko_d</strong></a>
+        <a class="contact-link" href="https://github.com/codreise" target="_blank">GitHub<br /><strong>github.com/codreise</strong></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/дмитро-кіріченко-6387b6270/" target="_blank">LinkedIn<br /><strong>linkedin.com/in/dmytro-kirichenko</strong></a>
+      </div>
+    </div></section>
 
     <footer>
       <p>© 2025 Дмитро Кіріченко</p>
@@ -224,7 +140,26 @@ window.onload = () => {
   `;
 
   initLamp();
+  initPageEnhancements();
 };
+
+function initPageEnhancements() {
+  const links = [...document.querySelectorAll('nav a[href^="#"]')];
+  const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  sections.forEach(section => observer.observe(section));
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('section').forEach(section => { section.classList.add('reveal'); revealObserver.observe(section); });
+}
 
 function initLamp() {
   let startX, startY;

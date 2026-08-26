@@ -181,4 +181,45 @@ body.dark-theme .btn-secondary { color: var(--muted); }
   .hero-actions .btn { text-align: center; }
   .hero-links { gap: 15px; }
 }
+/* Portfolio refinements: static project previews, compact skills, and editorial resume/contact blocks. */
+.skills-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.skill-group { padding: 22px; border: 1px solid var(--line); background: var(--panel); }
+.skill-group h3 { margin: 0 0 16px; color: var(--primary); font-family: 'DM Mono', monospace; font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tags span { padding: 7px 10px; border: 1px solid var(--line); color: var(--ink); font-size: .82rem; }
+.skill-tags span:hover { border-color: var(--primary); color: var(--primary); }
+.project-shot { min-height: 250px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; font-family: 'Manrope', sans-serif; }
+.project-shot span { font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .15em; opacity: .75; }
+.project-shot strong { font-size: clamp(1.6rem, 3vw, 2.7rem); line-height: 1.02; letter-spacing: -.06em; }
+.project-shot i { align-self: flex-start; padding: 6px 9px; border: 1px solid rgba(255,255,255,.35); font-size: .72rem; font-style: normal; }
+.todo-shot { background: linear-gradient(135deg, #303a3a, #667b70); }
+.weather-shot { background: linear-gradient(135deg, #315b6b, #7e9e9a); }
+.project-featured { grid-column: span 2; display: grid; grid-template-columns: 1.2fr 1fr; }
+.project-featured .project-shot { min-height: 330px; }
+.project-type { margin: 0 0 12px !important; color: var(--primary) !important; font-family: 'DM Mono', monospace; font-size: .65rem !important; letter-spacing: .12em; }
+.project-actions { display: flex; gap: 10px; margin-top: auto; }
+#resume { display: block; }
+#resume h2 { margin-bottom: 30px; }
+#resume::after { content: ''; display: block; clear: both; }
+.resume-timeline { border-left: 1px solid var(--primary); padding-left: 22px; margin-bottom: 28px; }
+.timeline-item { position: relative; margin-bottom: 22px; }
+.timeline-item::before { content: ''; position: absolute; width: 7px; height: 7px; left: -27px; top: 9px; background: var(--primary); }
+.timeline-item .year { display: block; color: var(--primary); font-family: 'DM Mono', monospace; font-size: .72rem; }
+.timeline-item strong { display: block; margin-top: 4px; color: var(--ink); }
+.timeline-item p { max-width: 650px; margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+#contact { padding-bottom: 70px; }
+.contact-cta { max-width: 720px; }
+.contact-cta h2 { max-width: 650px; font-size: clamp(2.2rem, 5vw, 4.5rem); }
+.contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 28px; }
+.contact-link { padding: 15px 16px; border: 1px solid var(--line); color: var(--muted); text-decoration: none; transition: border-color var(--ease), color var(--ease), transform var(--ease); }
+.contact-link:hover { transform: translateY(-3px); border-color: var(--primary); color: var(--primary); }
+body.dark-theme .skill-group, body.dark-theme .project-card, body.dark-theme .contact-link { background: var(--panel); }
+body.dark-theme .skill-tags span { color: var(--ink); }
+@media (max-width: 700px) { .project-featured { grid-column: auto; display: flex; } .project-featured .project-shot { min-height: 250px; } .skills-groups, .contact-links { grid-template-columns: 1fr; } }
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+nav a.is-active { color: var(--primary); }
+.contact-link strong { color: var(--ink); font-size: .8rem; font-weight: 600; }
+@media (max-width: 560px) { nav { padding-right: 42px; gap: 10px 14px; } nav a { min-height: 38px; display: inline-flex; align-items: center; } .project-info { padding: 20px; } .project-shot { min-height: 220px; padding: 20px; } .project-shot strong { font-size: 1.8rem; } section { padding-top: 42px; padding-bottom: 42px; } }
+@media (prefers-reduced-motion: reduce) { .reveal, .reveal.is-visible { opacity: 1; transform: none; } }
 /* GitHub Pages keeps the relative /portfolio/ asset paths intact. */
