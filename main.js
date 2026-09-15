@@ -4,7 +4,6 @@ window.onload = () => {
   app.innerHTML = `
     <header>
       <h1>Дмитро Кіріченко</h1>
-      <p>Full-Stack Developer</p>
       <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false"><span aria-hidden="true">☰</span></button>
       <nav>
         ${['about','skills','projects','resume','contact'].map(id =>
@@ -56,7 +55,6 @@ window.onload = () => {
 
     <section id="hero" class="hero-section" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="hero-kicker">ВІДКРИТИЙ ДО НОВИХ МОЖЛИВОСТЕЙ</p>
         <h2 id="hero-title">Дмитро<br /><span>Кіріченко</span></h2>
         <p class="hero-role">Junior Full-Stack JavaScript Developer</p>
         <p class="hero-summary">Створюю зрозумілі вебзастосунки, Telegram-ботів та автоматизації, які допомагають вирішувати реальні задачі.</p>
@@ -73,17 +71,15 @@ window.onload = () => {
       <div class="hero-visual">
         <span class="hero-frame" aria-hidden="true"></span>
         <img src="image/my-photo.jpg" alt="Фото Дмитра Кіріченка" class="profile-photo" />
-        <p class="hero-caption">JS / NODE / REACT</p>
       </div>
     </section>
 
     <section id="about" class="about-section">
       <div class="about-text">
-        <p class="section-eyebrow">ПРОФЕСІЙНИЙ ФОКУС</p>
         <h2>Про мене</h2>
         <div class="about-copy">
-          <p>Мотивований <strong>Junior Full Stack Developer</strong>, швидко навчаюсь та прагну створювати зрозумілі, зручні й стабільні вебзастосунки.</p>
-          <p>Орієнтований на професійний розвиток і командну співпрацю. Спеціалізуюся на <strong>JavaScript</strong>, <strong>React</strong> та <strong>Node.js</strong>, а також маю практичний досвід роботи з HTML, CSS, PostgreSQL та Git / GitHub.</p>
+          <p>Я — <strong>Junior Full-Stack JavaScript Developer</strong>. Створюю адаптивні інтерфейси, серверну логіку та інтеграції для вебзастосунків і Telegram-ботів. Основний стек — <strong>JavaScript, React, Node.js та PostgreSQL</strong>.</p>
+          <p>Маю практичний досвід роботи з Express, Redux, MongoDB, SQL, Docker, Formik та Yup. Для контролю версій використовую Git і GitHub. Продовжую розвивати знання JavaScript та сучасної full-stack розробки.</p>
         </div>
         <div class="tech-tags" aria-label="Основні технології">
           <span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Git</span>
@@ -95,13 +91,13 @@ window.onload = () => {
       <p class="section-eyebrow">ІНСТРУМЕНТАРІЙ</p>
       <h2>Навички</h2>
       <p class="skills-intro">Технології, які використовую для створення сучасних вебзастосунків.</p>
+      <div class="skill-percent-data" aria-hidden="true" data-percent-values="JavaScript:85%, React:75%, HTML5:90%, CSS3:90%, Node.js:70%, Express:70%, PostgreSQL:65%, MongoDB:50%, Git:80%, Docker:45%"></div>
       <div class="skills-bento">
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20l-2 18-8 2-8-2L2 2Zm4 4 .4 4.5h9.1l-.3 2.8H6.7l.3 2.2 5 .9 5-.9.7-7.5H6Zm.3-3 9.4 0-.3 2H6.5L6.3 3Z"/></svg>JavaScript</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 2.7a6.8 6.8 0 0 1 5.4 2.6 6.8 6.8 0 0 0-9.5 9.5A6.8 6.8 0 0 1 12 5.2Zm0 13.6a6.8 6.8 0 0 1-5.4-2.6 6.8 6.8 0 0 0 9.5-9.5 6.8 6.8 0 0 1-4.1 12.1Z"/></svg>React</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20l-2 18-8 2-8-2L2 2Zm3.3 3.2.3 3.4h12.2l-.3 3.5H8.8l.3 2.1 3.8.8 3.8-.8.3-2.1h2.2l-.6 4-5.7 1.3-5.7-1.3L6.1 12h2.2l.2 1.5h7l.2-1.5H5.9L5.3 5.2h14.1l-.2 2.2H7.7l-.2-2.2H5.3Z"/></svg>HTML5</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18l-1.7 15.5L12 21l-7.3-2.5L3 3Zm3.4 3 .3 3.1h10.5l-.3 2.3H7l.3 2.9 4.7 1.3 4.7-1.3.3-2.1h2.1l-.5 4-6.6 1.8-6.6-1.8L5 11.4h2.2L7 8.3h12.1l.3-2.3H6.4Z"/></svg>CSS3</span></div></article>
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">{ }</span><h3>Backend</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.5 0-9 2.3-9 5.2v8.6c0 2.9 3.5 5.2 9 5.2s9-2.3 9-5.2V7.7c0-2.9-3.5-5.2-9-5.2Zm6.5 13.8c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6v-2.1c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6v2.1Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6V9.9c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6V12Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6S5.5 9.1 5.5 7.7 8.1 5.1 12 5.1s6.5 1.2 6.5 2.6Z"/></svg>Node.js</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v10h2V7H7Zm4 0v10h2V7h-2Zm4 0v10h2V7h-2Z"/></svg>Express</span></div></article>
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">DB</span><h3>Databases</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4.4 0 8 1.3 8 3v12c0 1.7-3.6 3-8 3s-8-1.3-8-3V6c0-1.7 3.6-3 8-3Zm-5.5 4.2C7.7 8 9.7 8.4 12 8.4s4.3-.4 5.5-1.2V6.3c-.8.7-3 1.2-5.5 1.2S7.3 7 6.5 6.3v.9Zm0 4.6c1.2.8 3.2 1.2 5.5 1.2s4.3-.4 5.5-1.2v-1.3c-1.2.8-3.2 1.2-5.5 1.2s-4.3-.4-5.5-1.2v1.3Z"/></svg>PostgreSQL</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-4.7 0-7.5 2.1-7.5 5v9c0 2.9 2.8 5 7.5 5s7.5-2.1 7.5-5v-9c0-2.9-2.8-5-7.5-5Zm0 2.5c3.1 0 5 .9 5 2s-1.9 2-5 2-5-.9-5-2 1.9-2 5-2Zm5 11.5c0 1.1-1.9 2-5 2s-5-.9-5-2v-2c1.4.8 3 1.1 5 1.1s3.6-.3 5-1.1v2Z"/></svg>MongoDB</span></div></article>
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">↗</span><h3>Tools</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 2.8L5.5 8.4v7.2l6.5 3.6 6.5-3.6V8.4L12 4.8Zm-1.2 3h2.4v5.1l3.2-1.8 1.2 2.1-5.6 3.1-5.6-3.1 1.2-2.1 3.2 1.8V7.8Z"/></svg>Git</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 2.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm-1.2 2h2.4v4.1l2.5 1.5-1.2 2-3.7-2.3V7.5Z"/></svg>Docker</span></div></article>
       </div>
-      <p class="skills-language">English <span aria-hidden="true">/</span> B2 · Intermediate</p>
     </section>
 
     <section id="projects">
@@ -150,29 +146,10 @@ window.onload = () => {
 };
 
 function initSkillProficiency() {
-  const levels = {
-    JavaScript: ['Advanced', 85],
-    React: ['Intermediate', 75],
-    HTML5: ['Advanced', 90],
-    CSS3: ['Advanced', 90],
-    'Node.js': ['Intermediate', 70],
-    Express: ['Intermediate', 70],
-    PostgreSQL: ['Intermediate', 65],
-    MongoDB: ['Basic', 50],
-    Git: ['Advanced', 80],
-    Docker: ['Basic', 45]
-  };
-
   document.querySelectorAll('#skills .skill-tags > span').forEach(tag => {
-    const name = tag.textContent.trim();
-    const level = levels[name];
-    if (!level) return;
-    const icon = tag.querySelector('.tech-logo')?.outerHTML || '';
     tag.classList.add('skill-item');
-    const filledDots = Math.round(level[1] / 20);
-    const dots = Array.from({ length: 5 }, (_, index) => `<span class="skill-level-dot${index < filledDots ? ' is-filled' : ''}" aria-hidden="true"></span>`).join('');
-    tag.innerHTML = `${icon}<span class="skill-item__name">${name}</span><span class="skill-item__level"><span class="skill-level-dots">${dots}</span><span class="skill-item__percent">${level[1]}%</span></span>`;
-    tag.setAttribute('aria-label', `${name}: ${level[0]}, ${level[1]}%`);
+    const name = tag.textContent.trim();
+    tag.setAttribute('aria-label', name);
   });
 }
 
@@ -218,7 +195,25 @@ function initPageEnhancements() {
 
 function initLamp() {
   let startX, startY;
-  const STATE = { ON: false };
+  // The legacy dark-theme class selects the light palette.
+  const STATE = { ON: !document.body.classList.contains('dark-theme') };
+  const THEME_TOGGLE = document.querySelector('.theme-toggle');
+  const syncTheme = () => {
+    document.body.classList.toggle('dark-theme', !STATE.ON);
+    document.documentElement.style.setProperty('--on', STATE.ON ? '1' : '0');
+    THEME_TOGGLE.setAttribute('aria-label', STATE.ON ? 'Увімкнути світлу тему' : 'Увімкнути темну тему');
+  };
+  const toggleTheme = () => {
+    STATE.ON = !STATE.ON;
+    syncTheme();
+  };
+  syncTheme();
+  // Theme switching remains available if the animation CDN fails.
+  if (!window.gsap || !window.Draggable || !window.MorphSVGPlugin) {
+    THEME_TOGGLE.addEventListener('click', toggleTheme);
+    return;
+  }
+  let suppressClickUntil = 0;
   const CORDS = document.querySelectorAll('.toggle-scene__cord');
   const HIT = document.querySelector('.toggle-scene__hit-spot');
   const DUMMY = document.querySelector('.toggle-scene__dummy-cord');
@@ -234,11 +229,9 @@ function initLamp() {
   const CORD_TL = gsap.timeline({
     paused: true,
     onStart: () => {
-      STATE.ON = !STATE.ON;
-      gsap.set(document.documentElement, { '--on': STATE.ON ? 1 : 0 });
+      toggleTheme();
       gsap.set([DUMMY, HIT], { display: 'none' });
       gsap.set(CORDS[0], { display: 'block' });
-      document.body.classList.toggle('dark-theme', !STATE.ON);
     },
     onComplete: () => {
       gsap.set([DUMMY, HIT], { display: 'block' });
@@ -256,9 +249,9 @@ function initLamp() {
     }));
   }
 
-  const THEME_TOGGLE = document.querySelector('.theme-toggle');
   THEME_TOGGLE.addEventListener('click', event => {
-    if (event.target === event.currentTarget) CORD_TL.restart();
+    if (event.detail !== 0 && performance.now() < suppressClickUntil) return;
+    if (!CORD_TL.isActive()) CORD_TL.restart();
   });
 
   Draggable.create(PROXY, {
@@ -270,10 +263,12 @@ function initLamp() {
     },
     onRelease: function(e) {
       const dist = Math.hypot(e.x - startX, e.y - startY);
+      const pulled = dist > 50;
+      if (pulled) suppressClickUntil = performance.now() + 400;
       gsap.to(DUMMY_CORD, {
         attr: { x2: ENDX, y2: ENDY },
         duration: 0.1,
-        onComplete: () => dist > 50 ? CORD_TL.restart() : RESET()
+        onComplete: () => pulled && !CORD_TL.isActive() ? CORD_TL.restart() : RESET()
       });
     }
   });
