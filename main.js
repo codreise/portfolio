@@ -59,13 +59,8 @@ window.onload = () => {
         <p class="hero-role">Junior Full-Stack JavaScript Developer</p>
         <p class="hero-summary">Створюю зрозумілі вебзастосунки, Telegram-ботів та автоматизації, які допомагають вирішувати реальні задачі.</p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Переглянути проєкти</a>
+          <a href="#projects" class="btn btn-primary">Переглянути проекти</a>
           <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="btn btn-secondary">Завантажити резюме</a>
-        </div>
-        <div class="hero-links" aria-label="Соціальні посилання">
-          <a href="https://github.com/codreise" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/дмитро-кіріченко-6387b6270/" target="_blank">LinkedIn</a>
-          <a href="https://t.me/kirichenko_d" target="_blank">Telegram</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -81,14 +76,10 @@ window.onload = () => {
           <p>Я — <strong>Junior Full-Stack JavaScript Developer</strong>. Створюю адаптивні інтерфейси, серверну логіку та інтеграції для вебзастосунків і Telegram-ботів. Основний стек — <strong>JavaScript, React, Node.js та PostgreSQL</strong>.</p>
           <p>Маю практичний досвід роботи з Express, Redux, MongoDB, SQL, Docker, Formik та Yup. Для контролю версій використовую Git і GitHub. Продовжую розвивати знання JavaScript та сучасної full-stack розробки.</p>
         </div>
-        <div class="tech-tags" aria-label="Основні технології">
-          <span>JavaScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Git</span>
-        </div>
       </div>
     </section>
 
     <section id="skills">
-      <p class="section-eyebrow">ІНСТРУМЕНТАРІЙ</p>
       <h2>Навички</h2>
       <p class="skills-intro">Технології, які використовую для створення сучасних вебзастосунків.</p>
       <div class="skill-percent-data" aria-hidden="true" data-percent-values="JavaScript:85%, React:75%, HTML5:90%, CSS3:90%, Node.js:70%, Express:70%, PostgreSQL:65%, MongoDB:50%, Git:80%, Docker:45%"></div>
@@ -101,9 +92,25 @@ window.onload = () => {
     </section>
 
     <section id="projects">
-      <p class="section-eyebrow">ВИБРАНІ РОБОТИ</p>
-      <h2>Проєкти</h2>
+      <h2>Проекти</h2>
       <div class="projects-grid">
+        <article class="project-card project-featured">
+          <div class="project-shot orders-products-shot" role="img" aria-label="Orders & Products — інтерфейс керування замовленнями та товарами">
+            <img class="orders-products-preview" src="image/orders-products.webp" alt="Orders & Products — список замовлень і деталі у режимі Split View" width="1817" height="866" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-info">
+            <p class="project-type">FULL-STACK</p>
+            <h3>Orders &amp; Products</h3>
+            <p>Full-stack SPA для керування замовленнями, товарами та їх надходженнями. Застосунок підтримує фільтрацію даних, Split View, інтерактивні модальні вікна та відображення кількості активних сесій у реальному часі через Socket.IO.</p>
+            <div class="project-tech" aria-label="Технології Orders &amp; Products">
+              <span>React</span><span>Vite</span><span>Redux Toolkit</span><span>Bootstrap</span><span>Node.js</span><span>Express</span><span>Socket.IO</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://orders-products-test-5.onrender.com" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Відкрити Live Demo Orders &amp; Products">Live Demo ↗</a>
+              <a href="https://github.com/codreise/orders-products-test" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Відкрити GitHub Orders &amp; Products">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
         <article class="project-card">
           <div class="project-shot hero-shot" role="img" aria-label="Статичне прев’ю Hero's Journey"><div class="hero-mini-banner" aria-hidden="true"><span class="hero-pixel-mark">✦</span><span class="hero-pixel-copy">QUEST LOG<br /><b>HERO’S JOURNEY</b></span><span class="hero-pixel-spark">◆</span></div><div class="hero-shot-status"><span><b class="status-dot"></b> ONLINE</span><em>v1.0</em></div><span>HERO&apos;S JOURNEY</span><strong>Choose your path.<br />Shape your story.</strong><i>Telegram RPG</i></div>
           <div class="project-info"><h3>Hero&apos;s Journey</h3><p>Інтерактивний Telegram RPG-бот із динамічним сторітелінгом, керуванням характеристиками персонажа та розгалуженими виборами.</p><div class="project-tech" aria-label="Технології Hero's Journey"><span>JavaScript / Node.js</span><span>Telegram Bot API</span><span>React (Web App)</span></div><div class="project-actions"><a href="https://t.me/Her0JourneyBot" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Відкрити Telegram Bot Hero's Journey">Telegram Bot ↗</a><a href="https://github.com/codreise/Hero-s-Journey" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Відкрити GitHub Hero's Journey">GitHub ↗</a></div></div>

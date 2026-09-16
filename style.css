@@ -156,9 +156,6 @@ body.dark-theme footer { color: var(--quiet); }
 .btn-primary { background: var(--primary); color: var(--page); }
 .btn-secondary { border-color: var(--line); color: var(--muted); }
 .btn-secondary:hover { border-color: var(--primary); color: var(--page); }
-.hero-links { display: flex; gap: 22px; margin-top: 28px; }
-.hero-links a { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .72rem; text-decoration: none; border-bottom: 1px solid transparent; transition: color var(--ease), border-color var(--ease); }
-.hero-links a:hover, .hero-links a:focus-visible { color: var(--primary); border-color: var(--primary); }
 .hero-visual { position: relative; width: min(100%, 360px); justify-self: end; padding: 18px; }
 .hero-frame { position: absolute; inset: 0; border: 1px solid var(--primary); opacity: .65; pointer-events: none; }
 .hero-visual::before { content: ''; position: absolute; z-index: -1; width: 88px; height: 88px; right: -22px; top: -24px; background: var(--primary); opacity: .15; }
@@ -171,8 +168,6 @@ body.dark-theme footer { color: var(--quiet); }
 .about-copy strong { color: var(--ink); font-weight: 700; }
 .about-copy p { color: #d4d4d8; }
 body.dark-theme .about-copy p { color: var(--muted); }
-.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-.tech-tags span { padding: 6px 10px; border: 1px solid var(--line); color: var(--signal-soft); font-family: 'DM Mono', monospace; font-size: .68rem; }
 header { padding: 13px 0 11px; }
 nav .resume-btn { padding: 3px 0; border-bottom: 1px solid var(--primary); background: transparent; color: var(--primary); }
 nav .resume-btn:hover { background: transparent; color: var(--ink); }
@@ -192,7 +187,6 @@ body.dark-theme .btn-secondary { color: var(--muted); }
   .hero-section h2 { font-size: clamp(3.3rem, 17vw, 5rem); }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .hero-actions .btn { text-align: center; }
-  .hero-links { gap: 15px; }
 }
 /* Portfolio refinements: static project previews, compact skills, and editorial resume/contact blocks. */
 .skills-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -295,7 +289,7 @@ body.dark-theme section, body.dark-theme .about-section, body.dark-theme header 
 body.dark-theme .card, body.dark-theme .front-content, body.dark-theme .skill-group, body.dark-theme .project-card, body.dark-theme .contact-link { background: var(--panel-deep); }
 body.dark-theme .project-info { background: var(--panel-deep); }
 body.dark-theme .skill-group { background: var(--panel-deep); }
-body.dark-theme .skill-tags span, body.dark-theme .tech-tags span { background: var(--panel); border-color: var(--line); }
+body.dark-theme .skill-tags span { background: var(--panel); border-color: var(--line); }
 body.dark-theme .btn-primary, body.dark-theme nav .resume-btn { background: var(--primary); color: #fff; }
 body.dark-theme .btn-primary:hover, body.dark-theme nav .resume-btn:hover { background: var(--primary-dark); color: #fff; }
 body.dark-theme .btn-secondary { border-color: var(--line); color: var(--muted); }
@@ -308,7 +302,6 @@ body.dark-theme .profile-photo, body.dark-theme .profile-photo:hover { filter: n
 /* Compact Projects layout for laptop-height viewports. */
 #projects { padding-top: 32px; padding-bottom: 32px; }
 #projects > h2 { margin-bottom: 16px; }
-#projects .section-eyebrow { margin-bottom: 10px; }
 #projects .projects-grid { gap: 12px; }
 #projects .project-card { max-height: 360px; min-height: 0; }
 #projects .project-featured { grid-template-columns: 1.15fr .85fr; }
@@ -450,6 +443,9 @@ nav .resume-btn:hover { background: transparent; color: var(--primary); }
 .hero-shot-status span { display: inline-flex; align-items: center; gap: 5px; }
 .hero-shot-status em { padding: 2px 5px; border: 1px solid rgba(239,235,249,.22); color: rgba(239,235,249,.8); font-style: normal; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #75e0b4; box-shadow: 0 0 8px rgba(117,224,180,.7); }
+.orders-products-shot { position: relative; display: flex; align-items: center; justify-content: center; min-height: 250px; background: var(--panel-deep); color: var(--muted); }
+.orders-products-preview { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center; }
+body.dark-theme .orders-products-shot { background: var(--panel); }
 @media (prefers-reduced-motion: reduce) { .hero-shot::after { transition: none; } }
 @media (max-width: 560px) { .hero-mini-banner { min-height: 52px; padding: 8px 10px; } .hero-pixel-copy b { font-size: .62rem; } }
 
@@ -476,7 +472,7 @@ nav .resume-btn:hover { background: transparent; color: var(--primary); }
   .hero-section h2 { font-size: clamp(2.4rem, 13vw, 4.2rem); overflow-wrap: anywhere; }
   .hero-role, .hero-summary, .about-copy p, .project-info p { overflow-wrap: anywhere; }
   .hero-visual { width: min(82vw, 280px); max-width: 100%; align-self: center; justify-self: center; }
-  .hero-actions, .hero-links, .project-actions { width: 100%; }
+  .hero-actions, .project-actions { width: 100%; }
   .hero-actions .btn, .project-actions .btn { min-width: 0; overflow-wrap: anywhere; }
   .skills-bento, .projects-grid, .contact-links { grid-template-columns: 1fr !important; }
   .skill-group { width: 100%; min-width: 0; }
