@@ -11,6 +11,7 @@ window.onload = () => {
             ? `<a href="#${id}" class="resume-btn">Резюме</a>`
             : `<a href="#${id}">${{about:'Про мене',skills:'Навички',projects:'Проекти',contact:'Контакти'}[id]||id}</a>`
         ).join('')}
+      </nav>
         <button class="theme-toggle" type="button" aria-label="Toggle theme">
           <svg class="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 197.451 481.081">
           <defs>
@@ -50,14 +51,13 @@ window.onload = () => {
           </g>
         </svg>
         </button>
-      </nav>
     </header>
 
     <section id="hero" class="hero-section" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h2 id="hero-title">Дмитро<br /><span>Кіріченко</span></h2>
         <p class="hero-role">Junior Full-Stack JavaScript Developer</p>
-        <p class="hero-summary">Створюю зрозумілі вебзастосунки, Telegram-ботів та автоматизації, які допомагають вирішувати реальні задачі.</p>
+        <p class="hero-summary">Розробляю full-stack вебзастосунки та Telegram-ботів на JavaScript. Працюю з React, Node.js і PostgreSQL, створюю адаптивні інтерфейси, REST API та функції реального часу.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">Переглянути проекти</a>
           <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="btn btn-secondary">Завантажити резюме</a>
@@ -82,10 +82,10 @@ window.onload = () => {
     <section id="skills">
       <h2>Навички</h2>
       <p class="skills-intro">Технології, які використовую для створення сучасних вебзастосунків.</p>
-      <div class="skill-percent-data" aria-hidden="true" data-percent-values="JavaScript:85%, React:75%, HTML5:90%, CSS3:90%, Node.js:70%, Express:70%, PostgreSQL:65%, MongoDB:50%, Git:80%, Docker:45%"></div>
-      <div class="skills-bento">
+      <p class="skills-legend"><span class="skills-legend-marker" aria-hidden="true"></span><span>Основний стек</span></p>
+      <div class="skills-matrix skills-bento">
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Frontend</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20l-2 18-8 2-8-2L2 2Zm4 4 .4 4.5h9.1l-.3 2.8H6.7l.3 2.2 5 .9 5-.9.7-7.5H6Zm.3-3 9.4 0-.3 2H6.5L6.3 3Z"/></svg>JavaScript</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 2.7a6.8 6.8 0 0 1 5.4 2.6 6.8 6.8 0 0 0-9.5 9.5A6.8 6.8 0 0 1 12 5.2Zm0 13.6a6.8 6.8 0 0 1-5.4-2.6 6.8 6.8 0 0 0 9.5-9.5 6.8 6.8 0 0 1-4.1 12.1Z"/></svg>React</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20l-2 18-8 2-8-2L2 2Zm3.3 3.2.3 3.4h12.2l-.3 3.5H8.8l.3 2.1 3.8.8 3.8-.8.3-2.1h2.2l-.6 4-5.7 1.3-5.7-1.3L6.1 12h2.2l.2 1.5h7l.2-1.5H5.9L5.3 5.2h14.1l-.2 2.2H7.7l-.2-2.2H5.3Z"/></svg>HTML5</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18l-1.7 15.5L12 21l-7.3-2.5L3 3Zm3.4 3 .3 3.1h10.5l-.3 2.3H7l.3 2.9 4.7 1.3 4.7-1.3.3-2.1h2.1l-.5 4-6.6 1.8-6.6-1.8L5 11.4h2.2L7 8.3h12.1l.3-2.3H6.4Z"/></svg>CSS3</span></div></article>
-        <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">{ }</span><h3>Backend</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.5 0-9 2.3-9 5.2v8.6c0 2.9 3.5 5.2 9 5.2s9-2.3 9-5.2V7.7c0-2.9-3.5-5.2-9-5.2Zm6.5 13.8c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6v-2.1c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6v2.1Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6V9.9c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6V12Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6S5.5 9.1 5.5 7.7 8.1 5.1 12 5.1s6.5 1.2 6.5 2.6Z"/></svg>Node.js</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v10h2V7H7Zm4 0v10h2V7h-2Zm4 0v10h2V7h-2Z"/></svg>Express</span></div></article>
+        <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">{ }</span><h3>Backend</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.5 0-9 2.3-9 5.2v8.6c0 2.9 3.5 5.2 9 5.2s9-2.3 9-5.2V7.7c0-2.9-3.5-5.2-9-5.2Zm6.5 13.8c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6v-2.1c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6v2.1Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6s-6.5-1.2-6.5-2.6V9.9c1.6 1.1 3.9 1.6 6.5 1.6s4.9-.5 6.5-1.6V12Zm0-4.3c0 1.4-2.6 2.6-6.5 2.6S5.5 9.1 5.5 7.7 8.1 5.1 12 5.1s6.5 1.2 6.5 2.6Z"/></svg>Node.js</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4Zm3 3v10h2V7H7Zm4 0v10h2V7h-2Zm4 0v10h2V7h-2Z"/></svg>Express</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5V5Zm2 3v2h4V8H7Zm0 4v2h10v-2H7Zm0 4h6v-2H7v2Z"/></svg>REST API</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM12 7v4m0 0-7 6m7-6 7 6"/></svg>Socket.IO</span></div></article>
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">DB</span><h3>Databases</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4.4 0 8 1.3 8 3v12c0 1.7-3.6 3-8 3s-8-1.3-8-3V6c0-1.7 3.6-3 8-3Zm-5.5 4.2C7.7 8 9.7 8.4 12 8.4s4.3-.4 5.5-1.2V6.3c-.8.7-3 1.2-5.5 1.2S7.3 7 6.5 6.3v.9Zm0 4.6c1.2.8 3.2 1.2 5.5 1.2s4.3-.4 5.5-1.2v-1.3c-1.2.8-3.2 1.2-5.5 1.2s-4.3-.4-5.5-1.2v1.3Z"/></svg>PostgreSQL</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-4.7 0-7.5 2.1-7.5 5v9c0 2.9 2.8 5 7.5 5s7.5-2.1 7.5-5v-9c0-2.9-2.8-5-7.5-5Zm0 2.5c3.1 0 5 .9 5 2s-1.9 2-5 2-5-.9-5-2 1.9-2 5-2Zm5 11.5c0 1.1-1.9 2-5 2s-5-.9-5-2v-2c1.4.8 3 1.1 5 1.1s3.6-.3 5-1.1v2Z"/></svg>MongoDB</span></div></article>
         <article class="skill-group"><div class="skill-heading"><span class="skill-icon" aria-hidden="true">↗</span><h3>Tools</h3></div><div class="skill-tags"><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 2.8L5.5 8.4v7.2l6.5 3.6 6.5-3.6V8.4L12 4.8Zm-1.2 3h2.4v5.1l3.2-1.8 1.2 2.1-5.6 3.1-5.6-3.1 1.2-2.1 3.2 1.8V7.8Z"/></svg>Git</span><span><svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 2.5a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13Zm-1.2 2h2.4v4.1l2.5 1.5-1.2 2-3.7-2.3V7.5Z"/></svg>Docker</span></div></article>
       </div>
@@ -153,26 +153,69 @@ window.onload = () => {
 };
 
 function initSkillProficiency() {
-  document.querySelectorAll('#skills .skill-tags > span').forEach(tag => {
+  const skillTags = [...document.querySelectorAll('#skills .skill-tags > span')];
+  const addSkill = (container, name, path) => {
+    if ([...container.children].some(item => item.textContent.trim() === name)) return;
+    const tag = document.createElement('span');
+    tag.innerHTML = `<svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg><span class="skill-item__name">${name}</span>`;
+    container.appendChild(tag);
+  };
+  const groups = [...document.querySelectorAll('#skills .skill-group')];
+  const frontend = groups.find(group => group.querySelector('h3')?.textContent.trim() === 'Frontend');
+  if (frontend) {
+    addSkill(frontend.querySelector('.skill-tags'), 'Redux', 'm12 3 9 9-9 9-2-2 5.6-5.6H3v-2.8h12.6L10 5l2-2Z');
+    addSkill(frontend.querySelector('.skill-tags'), 'Formik / Yup', 'M4 5h16v14H4V5Zm3 3v2h10V8H7Zm0 4v2h7v-2H7Z');
+  }
+  const tools = groups.find(group => group.querySelector('h3')?.textContent.trim() === 'Tools');
+  const git = tools?.querySelector('.skill-tags > span');
+  if (git) git.querySelector('.skill-item__name')?.replaceChildren(document.createTextNode('Git / GitHub'));
+  skillTags.concat(frontend ? [...frontend.querySelectorAll('.skill-tags > span')] : [], tools ? [...tools.querySelectorAll('.skill-tags > span')] : []).forEach(tag => {
     tag.classList.add('skill-item');
-    const name = tag.textContent.trim();
+    const name = tag.querySelector('.skill-item__name')?.textContent.trim() || tag.textContent.trim();
+    if (!tag.querySelector('.skill-item__name')) {
+      const label = document.createElement('span');
+      label.className = 'skill-item__name';
+      [...tag.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).forEach(node => label.appendChild(node));
+      tag.appendChild(label);
+    }
+    if (['JavaScript', 'React', 'Node.js', 'PostgreSQL'].includes(name)) tag.classList.add('skill--primary');
     tag.setAttribute('aria-label', name);
   });
+  const gitLabel = tools?.querySelector('.skill-tags > span .skill-item__name');
+  if (gitLabel) {
+    gitLabel.textContent = 'Git / GitHub';
+    gitLabel.parentElement.setAttribute('aria-label', 'Git / GitHub');
+  }
 }
 
 function initPageEnhancements() {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('header nav');
+  const mobileMenu = window.matchMedia('(max-width: 768px)');
+  const syncMenuAccessibility = () => {
+    const isClosedMobileMenu = mobileMenu.matches && !nav.classList.contains('is-open');
+    nav.inert = isClosedMobileMenu;
+    nav.setAttribute('aria-hidden', String(isClosedMobileMenu));
+  };
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
     menuToggle.setAttribute('aria-label', isOpen ? 'Закрити меню' : 'Відкрити меню');
+    syncMenuAccessibility();
   });
   nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
     nav.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.setAttribute('aria-label', 'Відкрити меню');
+    syncMenuAccessibility();
   }));
+  mobileMenu.addEventListener('change', () => {
+    nav.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Відкрити меню');
+    syncMenuAccessibility();
+  });
+  syncMenuAccessibility();
 
   const links = [...document.querySelectorAll('nav a[href^="#"]')];
   const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
