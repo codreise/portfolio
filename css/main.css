@@ -1,0 +1,12 @@
+/* CSS modules preserve the original style.css cascade order. */
+@import url('./variables.css');
+@import url('./global.css');
+@import url('./header.css');
+@import url('./buttons.css');
+@import url('./theme-toggle.css');
+@import url('./hero.css');
+@import url('./skills.css');
+@import url('./projects.css');
+@import url('./resume.css');
+@import url('./contact.css');
+@import url('./theme-dark.css');

@@ -1,0 +1,85 @@
+#skills .skills-bento {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+}
+#skills .skill-group {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--line) 88%, var(--primary) 12%);
+  background: var(--panel);
+  backdrop-filter: none;
+  transition: border-color .2s ease, background-color .2s ease, transform .2s ease;
+}
+#skills .skill-group:hover {
+  border-color: color-mix(in srgb, var(--primary) 58%, var(--line));
+  background: color-mix(in srgb, var(--panel) 94%, var(--primary) 6%);
+  box-shadow: none;
+}
+#skills .skill-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+#skills .skill-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+#skills .skill-tags > .skill-item {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, var(--primary) 22%);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--panel-deep) 88%, var(--primary) 12%);
+  color: var(--ink);
+  font-size: .78rem;
+  line-height: 1.2;
+  transition: border-color .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
+}
+#skills .skill-tags > .skill-item:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--panel-deep) 82%, var(--primary) 18%);
+  color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+#skills .skill-item .tech-logo {
+  box-sizing: border-box;
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  padding: 5px;
+  object-fit: contain;
+  fill: currentColor;
+  color: var(--muted);
+  opacity: .9;
+  transition: color .2s ease, opacity .2s ease;
+}
+#skills .skill-item:hover .tech-logo { color: var(--primary); opacity: 1; }
+@media (max-width: 700px) {
+  #skills .skills-bento { grid-template-columns: 1fr; }
+  #skills .skill-group { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #skills .skill-group,
+  #skills .skill-tags > .skill-item,
+  #skills .skill-item .tech-logo { transition: none; }
+}
+
+/* Final matrix precedence over the earlier card layout rules. */
+#skills .skills-matrix { grid-template-columns: 1fr; }

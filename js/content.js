@@ -1,6 +1,4 @@
-window.onload = () => {
-  const app = document.getElementById("app");
-
+export function renderContent(app) {
   app.innerHTML = `
     <header>
       <h1>Дмитро Кіріченко</h1>
@@ -73,7 +71,7 @@ window.onload = () => {
       <div class="about-text">
         <h2>Про мене</h2>
         <div class="about-copy">
-          <p>Я — <strong>Junior Full-Stack JavaScript Developer</strong>. Створюю адаптивні інтерфейси, серверну логіку та інтеграції для вебзастосунків і Telegram-ботів. Основний стек — <strong>JavaScript, React, Node.js та PostgreSQL</strong>.</p>
+          <p><strong>Junior Full-Stack Developer JS</strong>. Створюю адаптивні інтерфейси, серверну логіку та інтеграції для вебзастосунків і Telegram-ботів. Основний стек — <strong>JavaScript, React, Node.js та PostgreSQL</strong>.</p>
           <p>Маю практичний досвід роботи з Express, Redux, MongoDB, SQL, Docker, Formik та Yup. Для контролю версій використовую Git і GitHub. Продовжую розвивати знання JavaScript та сучасної full-stack розробки.</p>
         </div>
       </div>
@@ -121,7 +119,7 @@ window.onload = () => {
     <section id="resume">
       <p class="section-eyebrow">ДОСВІД І НАВЧАННЯ</p><h2>Резюме</h2>
       <div class="resume-timeline">
-        <article class="timeline-item"><span class="timeline-label">ПРАКТИЧНИЙ ДОС��ІД / ПРОЄКТИ</span><span class="year">2023 — Теперішній час</span><strong>Full Stack Developer <small>(Pet-projects / Freelance)</small></strong><p>Розробка full-stack вебзастосунків, проектування REST API, робота з базами даних PostgreSQL/MongoDB та деплой на Vercel/Render.</p></article>
+        <article class="timeline-item"><span class="timeline-label">ПРАКТИЧНИЙ ДОСВІД / ПРОЄКТИ</span><span class="year">2023 — Теперішній час</span><strong>Full Stack Developer <small>(Pet-projects / Freelance)</small></strong><p>Розробка full-stack вебзастосунків, проектування REST API, робота з базами даних PostgreSQL/MongoDB та деплой на Vercel/Render.</p></article>
         <article class="timeline-item"><span class="timeline-label">ОСВІТА ТА СЕРТИФІКАЦІЯ</span><span class="year">2023 — 2024</span><strong>Курси Full-Stack Development / Курс JavaScript</strong><p>Опанування сучасного JavaScript, React, Node.js та командної розробки через Git.</p><div class="certificate-card"><span class="certificate-label">// CERTIFICATE</span><strong>Fullstack JS Developer Course Certificate</strong><span class="certificate-meta">Freshcode training center · 24 березня 2023</span><a class="certificate-link" href="assets/fullstack-js-certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="Переглянути сертифікат Fullstack JS Developer">Переглянути сертифікат ↗</a></div></article>
       </div>
       <a href="assets/Kirichenko Dmitry Volodymyrovych Full Stack Developer.pdf" download class="download-resume-btn">Завантажити резюме</a>
@@ -146,180 +144,4 @@ window.onload = () => {
       <span aria-hidden="true">↑</span>
     </button>
   `;
-
-  initLamp();
-  initSkillProficiency();
-  initPageEnhancements();
-};
-
-function initSkillProficiency() {
-  const skillTags = [...document.querySelectorAll('#skills .skill-tags > span')];
-  const addSkill = (container, name, path) => {
-    if ([...container.children].some(item => item.textContent.trim() === name)) return;
-    const tag = document.createElement('span');
-    tag.innerHTML = `<svg class="tech-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg><span class="skill-item__name">${name}</span>`;
-    container.appendChild(tag);
-  };
-  const groups = [...document.querySelectorAll('#skills .skill-group')];
-  const frontend = groups.find(group => group.querySelector('h3')?.textContent.trim() === 'Frontend');
-  if (frontend) {
-    addSkill(frontend.querySelector('.skill-tags'), 'Redux', 'm12 3 9 9-9 9-2-2 5.6-5.6H3v-2.8h12.6L10 5l2-2Z');
-    addSkill(frontend.querySelector('.skill-tags'), 'Formik / Yup', 'M4 5h16v14H4V5Zm3 3v2h10V8H7Zm0 4v2h7v-2H7Z');
-  }
-  const tools = groups.find(group => group.querySelector('h3')?.textContent.trim() === 'Tools');
-  const git = tools?.querySelector('.skill-tags > span');
-  if (git) git.querySelector('.skill-item__name')?.replaceChildren(document.createTextNode('Git / GitHub'));
-  skillTags.concat(frontend ? [...frontend.querySelectorAll('.skill-tags > span')] : [], tools ? [...tools.querySelectorAll('.skill-tags > span')] : []).forEach(tag => {
-    tag.classList.add('skill-item');
-    const name = tag.querySelector('.skill-item__name')?.textContent.trim() || tag.textContent.trim();
-    if (!tag.querySelector('.skill-item__name')) {
-      const label = document.createElement('span');
-      label.className = 'skill-item__name';
-      [...tag.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).forEach(node => label.appendChild(node));
-      tag.appendChild(label);
-    }
-    if (['JavaScript', 'React', 'Node.js', 'PostgreSQL'].includes(name)) tag.classList.add('skill--primary');
-    tag.setAttribute('aria-label', name);
-  });
-  const gitLabel = tools?.querySelector('.skill-tags > span .skill-item__name');
-  if (gitLabel) {
-    gitLabel.textContent = 'Git / GitHub';
-    gitLabel.parentElement.setAttribute('aria-label', 'Git / GitHub');
-  }
-}
-
-function initPageEnhancements() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('header nav');
-  const mobileMenu = window.matchMedia('(max-width: 768px)');
-  const syncMenuAccessibility = () => {
-    const isClosedMobileMenu = mobileMenu.matches && !nav.classList.contains('is-open');
-    nav.inert = isClosedMobileMenu;
-    nav.setAttribute('aria-hidden', String(isClosedMobileMenu));
-  };
-  menuToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('is-open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Закрити меню' : 'Відкрити меню');
-    syncMenuAccessibility();
-  });
-  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Відкрити меню');
-    syncMenuAccessibility();
-  }));
-  mobileMenu.addEventListener('change', () => {
-    nav.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Відкрити меню');
-    syncMenuAccessibility();
-  });
-  syncMenuAccessibility();
-
-  const links = [...document.querySelectorAll('nav a[href^="#"]')];
-  const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
-      }
-    });
-  }, { rootMargin: '-25% 0px -65% 0px' });
-  sections.forEach(section => observer.observe(section));
-
-  const backToTop = document.querySelector('.back-to-top');
-  const updateBackToTop = () => {
-    backToTop.classList.toggle('is-visible', window.scrollY > 300);
-  };
-  window.addEventListener('scroll', updateBackToTop, { passive: true });
-  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'instant' }));
-  updateBackToTop();
-
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); revealObserver.unobserve(entry.target); }
-  }), { threshold: 0.12 });
-  document.querySelectorAll('section').forEach(section => { section.classList.add('reveal'); revealObserver.observe(section); });
-}
-
-function initLamp() {
-  let startX, startY;
-  // The legacy dark-theme class selects the light palette.
-  const STATE = { ON: !document.body.classList.contains('dark-theme') };
-  const THEME_TOGGLE = document.querySelector('.theme-toggle');
-  const syncTheme = () => {
-    document.body.classList.toggle('dark-theme', !STATE.ON);
-    document.documentElement.style.setProperty('--on', STATE.ON ? '1' : '0');
-    THEME_TOGGLE.setAttribute('aria-label', STATE.ON ? 'Увімкнути світлу тему' : 'Увімкнути темну тему');
-  };
-  const toggleTheme = () => {
-    STATE.ON = !STATE.ON;
-    syncTheme();
-  };
-  syncTheme();
-  // Theme switching remains available if the animation CDN fails.
-  if (!window.gsap || !window.Draggable || !window.MorphSVGPlugin) {
-    THEME_TOGGLE.addEventListener('click', toggleTheme);
-    return;
-  }
-  let suppressClickUntil = 0;
-  const CORDS = document.querySelectorAll('.toggle-scene__cord');
-  const HIT = document.querySelector('.toggle-scene__hit-spot');
-  const DUMMY = document.querySelector('.toggle-scene__dummy-cord');
-  const DUMMY_CORD = document.querySelector('.toggle-scene__dummy-cord line');
-  const PROXY = document.createElement('div');
-
-  const ENDX = DUMMY_CORD.getAttribute('x2');
-  const ENDY = DUMMY_CORD.getAttribute('y2');
-
-  const RESET = () => gsap.set(PROXY, { x: ENDX, y: ENDY });
-  RESET();
-
-  const CORD_TL = gsap.timeline({
-    paused: true,
-    onStart: () => {
-      toggleTheme();
-      gsap.set([DUMMY, HIT], { display: 'none' });
-      gsap.set(CORDS[0], { display: 'block' });
-    },
-    onComplete: () => {
-      gsap.set([DUMMY, HIT], { display: 'block' });
-      gsap.set(CORDS[0], { display: 'none' });
-      RESET();
-    }
-  });
-
-  for (let i = 1; i < CORDS.length; i++) {
-    CORD_TL.add(gsap.to(CORDS[0], {
-      morphSVG: CORDS[i],
-      duration: 0.1,
-      repeat: 1,
-      yoyo: true
-    }));
-  }
-
-  THEME_TOGGLE.addEventListener('click', event => {
-    if (event.detail !== 0 && performance.now() < suppressClickUntil) return;
-    if (!CORD_TL.isActive()) CORD_TL.restart();
-  });
-
-  Draggable.create(PROXY, {
-    trigger: HIT,
-    type: 'x,y',
-    onPress: e => { startX = e.x; startY = e.y; },
-    onDrag: function() {
-      gsap.set(DUMMY_CORD, { attr: { x2: this.x, y2: this.y } });
-    },
-    onRelease: function(e) {
-      const dist = Math.hypot(e.x - startX, e.y - startY);
-      const pulled = dist > 50;
-      if (pulled) suppressClickUntil = performance.now() + 400;
-      gsap.to(DUMMY_CORD, {
-        attr: { x2: ENDX, y2: ENDY },
-        duration: 0.1,
-        onComplete: () => pulled && !CORD_TL.isActive() ? CORD_TL.restart() : RESET()
-      });
-    }
-  });
 }

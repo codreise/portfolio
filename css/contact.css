@@ -1,0 +1,74 @@
+
+/* Final Skills list precedence. */
+#skills .skills-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+#skills .skill-group {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transform: none;
+}
+#skills .skill-heading { margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+#skills .skill-tags { display: flex; flex-direction: column; gap: 0; }
+#skills .skill-tags > .skill-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  min-height: 42px;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 0;
+  background: transparent;
+  transform: none;
+}
+#skills .skill-tags > .skill-item:last-child { border-bottom: 0; }
+#skills .skill-item__icon {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: .58rem;
+  line-height: 1;
+}
+#skills .skill-item__name { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
+#skills .skill-item.skill--primary .skill-item__name { font-weight: 700; }
+#skills .skill-item.skill--primary .skill-item__icon {
+  border-color: color-mix(in srgb, var(--primary) 58%, var(--line));
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+}
+@media (hover: hover) and (pointer: fine) {
+  #skills .skill-tags > .skill-item:hover {
+    background: color-mix(in srgb, var(--primary) 5%, transparent);
+    color: var(--primary);
+    transform: translateY(-1px);
+  }
+  #skills .skill-tags > .skill-item:hover .skill-item__icon { border-color: var(--primary); color: var(--primary); }
+}
+@media (hover: none), (pointer: coarse) {
+  #skills .skill-tags > .skill-item:hover { transform: none; }
+}
+@media (max-width: 700px) {
+  #skills .skills-bento { grid-template-columns: 1fr; gap: 12px; }
+  #skills .skill-group { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #skills .skill-group,
+  #skills .skill-tags > .skill-item { transition: none; }
+  #skills .skill-tags > .skill-item:hover { transform: none; }
+}
+@media (min-width: 701px) {
+  #skills .skills-bento { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* Override legacy matrix specificity inside Skills only. */
